@@ -5,4 +5,3 @@ Assignments for web-231
   <ul>
     <li>Professor Krasso</li>
     <li>Shane Hingtgen</li>
-test
