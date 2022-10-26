@@ -40,29 +40,43 @@
                     <li id="txtPayRate3">50.11</li><!--Changed this to 50.11, document provided only showed final variable of 50.1, wanted to see code work-->
                 </ul>
             <script>
-                let firstName1= document.getElementById('txtFirstName1').innerHTML ;
-                let lastName1= document.getElementById('txtLastName1').innerHTML;
-                let address1= document.getElementById('txtAddress1').innerHTML;
+                let firstName1 = document.getElementById('txtFirstName1').innerHTML ;
+                let lastName1 = document.getElementById('txtLastName1').innerHTML;
+                let address1 = document.getElementById('txtAddress1').innerHTML;
+                //To round the pay rate to the nearest tenth of the decimal
                 let payRate1 = document.getElementById('txtPayRate1').innerHTML;
                 payRate1 = Number(payRate1).toFixed(1);
                 document.getElementById('txtPayRate1').innerHTML = payRate1;
-                 hireDate1 ='txtHireDate1';
+                //Hire date is set to the local date
+                const d = new Date(); //only need to declare the const once
+                let hireDate1 = d.toLocaleDateString();
+                document.getElementById("txtHireDate1").innerHTML = hireDate1;
 
                 let firstName2 = document.getElementById('txtFirstName2').innerHTML ;
                 let lastName2 = document.getElementById('txtLastName2').innerHTML;
                 let address2 = document.getElementById('txtAddress2').innerHTML;
+                //To round the pay rate to the nearest tenth of the decimal
                 let payRate2  = document.getElementById('txtPayRate2').innerHTML;
                 payRate2 = Number(payRate2).toFixed(1);
                 document.getElementById('txtPayRate2').innerHTML = payRate2;
-                let hireDate2 ='txtHireDate2';
+
+                //Hire date is set to the local date
+                let hireDate2 = d.toLocaleDateString();
+                document.getElementById("txtHireDate2").innerHTML = hireDate2; //W3 Schools. (n.d.-b). JavaScript Date toLocaleDateString(). Retrieved October 25, 2022, from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_tolocaledatestring used this to get started
+                
 
                 let firstName3 = document.getElementById('txtFirstName3').innerHTML ;
                 let lastName3 = document.getElementById('txtLastName3').innerHTML;
                 let address3 = document.getElementById('txtAddress3').innerHTML;
+                //To round the pay rate to the nearest tenth of the decimal
                 let payRate3 = document.getElementById('txtPayRate3').innerHTML;
                 payRate3 = Number(payRate3).toFixed(1);
                 document.getElementById('txtPayRate3').innerHTML = payRate3;
-                let hireDate3 ='txtHireDate3';
+
+                //Hire date is set to the local date
+                let hireDate3 = d.toLocaleDateString();
+                document.getElementById("txtHireDate3").innerHTML = hireDate3;
+                
             </script>
         <a class='return-home' href="../index.html">Return</a>
         </div>
