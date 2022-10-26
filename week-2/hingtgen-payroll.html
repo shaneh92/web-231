@@ -1,0 +1,53 @@
+<!--This is the payroll html document-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web 231 - Enterprise JavaSCript I</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="hingtgen-payroll.css" type="text/css"
+                rel="stylesheet" />
+        <link href="../site.css" type="text/css"
+                rel="stylesheet" />  
+        <!--css document and the chosen fonts for the class-->     
+    </head>
+    <body>
+        <div id="containter"> <!-- The main div container for the body-->
+            <h1 id="payroll-header">Payroll System</h1>
+            <h3>Employee record 1</h3>
+                <ul>
+                    <li id="txtFirstName">Ludgwig</li>
+                    <li id="txtLastName">Beethoven</li>
+                    <li id="txtAddress">505 main street</li>
+                    <li id="txtHireDate">12/9/2020</li>
+                    <li id="txtPayRate">18.9</li>
+                </ul>
+            <h3>Employee Record 2</h3>
+                <ul>
+                    <li id="txtFirstName">Johann</li>
+                    <li id="txtLastName">Bach</li>
+                    <li id="txtAddress">512 main street</li>
+                    <li id="txtHireDate">12/9/2020</li>
+                    <li id="txtPayRate">25.5</li>
+                </ul>
+            <h3>Employee Record 3</h3>
+                <ul>
+                    <li id="txtFirstName">Wolfgang</li>
+                    <li id="txtLastName">Mozart</li>
+                    <li id="txtAddress">600 main street</li>
+                    <li id="txtHireDate">12/9/2020</li>
+                    <li id="txtPayRate">50.1</li>
+                </ul>
+            <a id ='return-home' href="../index.html">Return</a>
+            <script>
+                let firstName='txtFirstName';
+                let lastName='txtLastName';
+                let address='txtAddress';
+                let payRate='txtPayRate'
+                let hireDate='txtHireDate'
+            </script>
+        <a class='return-home' href="../index.html">Return</a>
+        </div>
+    </body>
+</html>
