@@ -16,35 +16,53 @@
         <div id="containter"> <!-- The main div container for the body-->
             <h1 id="payroll-header">Payroll System</h1>
             <h3>Employee record 1</h3>
-                <ul>
-                    <li id="txtFirstName">Ludgwig</li>
-                    <li id="txtLastName">Beethoven</li>
-                    <li id="txtAddress">505 main street</li>
-                    <li id="txtHireDate">12/9/2020</li>
-                    <li id="txtPayRate">18.9</li>
+                <ul><!--id is set to which employee record its associated with-->
+                    <li id="txtFirstName1">Ludgwig</li>
+                    <li id="txtLastName1">Beethoven</li>
+                    <li id="txtAddress1">505 main street</li>
+                    <li id="txtHireDate1">12/9/2020</li>
+                    <li id="txtPayRate1">18.92</li><!--Changed this to 18.92, document provided only showed final variable of 18.9, wanted to see code work-->
                 </ul>
             <h3>Employee Record 2</h3>
                 <ul>
-                    <li id="txtFirstName">Johann</li>
-                    <li id="txtLastName">Bach</li>
-                    <li id="txtAddress">512 main street</li>
-                    <li id="txtHireDate">12/9/2020</li>
-                    <li id="txtPayRate">25.5</li>
+                    <li id="txtFirstName2">Johann</li>
+                    <li id="txtLastName2">Bach</li>
+                    <li id="txtAddress2">512 main street</li>
+                    <li id="txtHireDate2">12/9/2020</li>
+                    <li id="txtPayRate2">25.55</li><!--Changed this to 25.55, document provided only showed final variable of 25.5, wanted to see code work-->
                 </ul>
             <h3>Employee Record 3</h3>
                 <ul>
-                    <li id="txtFirstName">Wolfgang</li>
-                    <li id="txtLastName">Mozart</li>
-                    <li id="txtAddress">600 main street</li>
-                    <li id="txtHireDate">12/9/2020</li>
-                    <li id="txtPayRate">50.1</li>
+                    <li id="txtFirstName3">Wolfgang</li>
+                    <li id="txtLastName3">Mozart</li>
+                    <li id="txtAddress3">600 main street</li>
+                    <li id="txtHireDate3">12/9/2020</li>
+                    <li id="txtPayRate3">50.11</li><!--Changed this to 50.11, document provided only showed final variable of 50.1, wanted to see code work-->
                 </ul>
             <script>
-                let firstName='txtFirstName';
-                let lastName='txtLastName';
-                let address='txtAddress';
-                let payRate='txtPayRate'
-                let hireDate='txtHireDate'
+                let firstName1= document.getElementById('txtFirstName1').innerHTML ;
+                let lastName1= document.getElementById('txtLastName1').innerHTML;
+                let address1= document.getElementById('txtAddress1').innerHTML;
+                let payRate1 = document.getElementById('txtPayRate1').innerHTML;
+                payRate1 = Number(payRate1).toFixed(1);
+                document.getElementById('txtPayRate1').innerHTML = payRate1;
+                 hireDate1 ='txtHireDate1';
+
+                let firstName2 = document.getElementById('txtFirstName2').innerHTML ;
+                let lastName2 = document.getElementById('txtLastName2').innerHTML;
+                let address2 = document.getElementById('txtAddress2').innerHTML;
+                let payRate2  = document.getElementById('txtPayRate2').innerHTML;
+                payRate2 = Number(payRate2).toFixed(1);
+                document.getElementById('txtPayRate2').innerHTML = payRate2;
+                let hireDate2 ='txtHireDate2';
+
+                let firstName3 = document.getElementById('txtFirstName3').innerHTML ;
+                let lastName3 = document.getElementById('txtLastName3').innerHTML;
+                let address3 = document.getElementById('txtAddress3').innerHTML;
+                let payRate3 = document.getElementById('txtPayRate3').innerHTML;
+                payRate3 = Number(payRate3).toFixed(1);
+                document.getElementById('txtPayRate3').innerHTML = payRate3;
+                let hireDate3 ='txtHireDate3';
             </script>
         <a class='return-home' href="../index.html">Return</a>
         </div>
