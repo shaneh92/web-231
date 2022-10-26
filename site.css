@@ -24,3 +24,6 @@ a:hover {
 a:visited {
     color: #3c275a;
 }
+h1#payroll-header {
+    text-align: center;
+}
