@@ -1,0 +1,185 @@
+html, head {
+    background-image: url("1920x1080\ MARPAT\ CAMO.jpg");
+    background-repeat: repeat;
+    /*USMC MARPAT CAMO. (n.d.). [Image]. Peak Px. https://www.peakpx.com/en/hd-wallpaper-desktop-airpt/download/1920x1080*/
+}
+
+div {
+    text-align: center;
+    
+}
+.header {
+    background-color: #6C7D6B;
+    height: 160px;
+    box-shadow: 5px 0px 20px black;
+    
+   
+}
+
+.center-index {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+body { 
+    align-self: center;
+    background-color: #ffffff;
+    margin-left: 60px;
+    margin-right: 60px;
+    box-shadow: 10px 10px 20px black;
+
+}
+
+p {
+    font-family: Arial;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 50px;
+
+}
+p.intro {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 32px;
+    width: 520px;
+    text-align: left;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.facts {
+    font-family: Arial;
+    font-size: 32px;
+    font-weight: bold;
+}
+.cite {
+    font-size: 10px;
+}
+
+h1 {  
+    font-family: verdana;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: Arial;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+h3 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 26px;
+}
+h4 {
+    font-family: Arial;
+    font-size: 40px;
+    text-decoration: underline;
+    text-align: center;
+}
+a {
+    color: #9A8261;
+    text-decoration: underline;
+}
+a:hover {
+    color: #6C7D68;
+    text-decoration: underline;
+
+}
+td.blank {
+    empty-cells:hide;
+    padding-bottom: 50px;
+    
+}
+td {
+    border: hidden;
+    
+}
+img {
+    box-shadow: 10px 10px 25px black;
+}
+.top {
+    margin-left: 540px;
+}
+.no-shadow {
+    box-shadow:none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.imgcite {
+    position: relative;
+    margin: 5px;
+    align-self: flex-start;
+    font-size: 10px;
+    font-family: Arial;
+}
+.list {
+    font-size: 20px;
+    font-family: Arial;
+}
+
+
+.button {
+  background-color: #9A8261;
+  border: 0;
+  border-radius: 56px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: verdana;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 0px;
+}
+
+.button:before {
+  background-color: initial;
+  background-image: linear-gradient(rgb(0, 0, 0) 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button  {
+    padding: 16px 48px;
+  }
+}
+footer {
+    background-color: #6C7D6B;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
