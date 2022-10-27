@@ -17,78 +17,81 @@
             <h1 id="payroll-header">Payroll System</h1>
             <h3>Employee record 1</h3>
                 <ul><!--id is set to which employee record its associated with-->
-                    <li id="txtFirstName1"></li>
-                    <li id="txtLastName1"></li>
-                    <li id="txtAddress1"></li>
-                    <li id="txtHireDate1"></li><!--date is set to local-->
-                    <li id="txtPayRate1"></li><!--rounded the decimal-->
+                    <li id="txtFirstNameRec1"></li>
+                    <li id="txtLastNameRec1"></li>
+                    <li id="txtAddressRec1"></li>
+                    <li id="txtHireDateRec1"></li><!--date is set to local-->
+                    <li id="txtPayRateRec1"></li><!--rounded the decimal-->
                 </ul>
             <h3>Employee Record 2</h3>
                 <ul>
-                    <li id="txtFirstName2"></li>
-                    <li id="txtLastName2"></li>
-                    <li id="txtAddress2"></li>
-                    <li id="txtHireDate2"></li>
-                    <li id="txtPayRate2"></li>
+                    <li id="txtFirstNameRec2"></li>
+                    <li id="txtLastNameRec2"></li>
+                    <li id="txtAddressRec2"></li>
+                    <li id="txtHireDateRec2"></li>
+                    <li id="txtPayRateRec2"></li>
                 </ul>
             <h3>Employee Record 3</h3>
                 <ul>
-                    <li id="txtFirstName3"></li>
-                    <li id="txtLastName3"></li>
-                    <li id="txtAddress3"></li>
-                    <li id="txtHireDate3"></li>
-                    <li id="txtPayRate3"></li>
+                    <li id="txtFirstNameRec3"></li>
+                    <li id="txtLastNameRec3"></li>
+                    <li id="txtAddressRec3"></li>
+                    <li id="txtHireDateRec3"></li>
+                    <li id="txtPayRateRec3"></li>
                 </ul>
             <script> 
                 //The three sets of variables, document.getElementById(“txtFirstNameLudwig”).innerHTML = firstNameVariable;
-                let firstName1 = 'Ludwig';
-                document.getElementById('txtFirstName1').innerHTML = firstName1;
-                let lastName1 = 'Beethoven';
-                document.getElementById('txtLastName1').innerHTML = lastName1;
-                let address1 = '505 main st';
-                document.getElementById('txtAddress1').innerHTML = address1;
+                //Start of Record 1
+                let firstNameRec1 = 'Ludwig';
+                document.getElementById('txtFirstNameRec1').innerHTML = firstNameRec1;
+                let lastNameRec1 = 'Beethoven';
+                document.getElementById('txtLastNameRec1').innerHTML = lastNameRec1;
+                let addressRec1 = '505 main st';
+                document.getElementById('txtAddressRec1').innerHTML = addressRec1;
 
                 //To round the pay rate to the nearest tenth of the decimal “12.999”.toFixed(1);
-                let payRate1 = 18.92;
-                payRate1 = Number(payRate1).toFixed(1);
-                document.getElementById('txtPayRate1').innerHTML = payRate1;
+                let payRateRec1 = 18.92;
+                payRateRec1 = Number(payRateRec1).toFixed(1);
+                document.getElementById('txtPayRateRec1').innerHTML = payRateRec1;
 
                 //Hire date is set to the local date
                 const d = new Date(); //only need to declare the const once
-                let hireDate1 = d.toLocaleDateString("en-US");//W3 Schools. (n.d.-b). JavaScript Date toLocaleDateString(). Retrieved October 25, 2022, from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_tolocaledatestring used this to get started
-                document.getElementById("txtHireDate1").innerHTML = hireDate1;
+                let hireDateRec1 = d.toLocaleDateString("en-US");//W3 Schools. (n.d.-b). JavaScript Date toLocaleDateString(). Retrieved October 25, 2022, from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_tolocaledatestring used this to get started
+                document.getElementById("txtHireDateRec1").innerHTML = hireDateRec1;
 
-                let firstName2 = 'Johann';
-                document.getElementById('txtFirstName2').innerHTML = firstName2;
-                let lastName2 = 'Bach';
-                document.getElementById('txtLastName2').innerHTML = lastName2;
-                let address2 = '512 main st';
-                document.getElementById('txtAddress2').innerHTML = address2;
-
-                
-                let payRate2 = 25.62;
-                payRate2 = Number(payRate2).toFixed(1);
-                document.getElementById('txtPayRate2').innerHTML = payRate2;
+                //Start of Record 2
+                let firstNameRec2 = 'Johann';
+                document.getElementById('txtFirstNameRec2').innerHTML = firstNameRec2;
+                let lastNameRec2 = 'Bach';
+                document.getElementById('txtLastNameRec2').innerHTML = lastNameRec2;
+                let addressRec2 = '512 main st';
+                document.getElementById('txtAddressRec2').innerHTML = addressRec2;
 
                 
-                let hireDate2 = d.toLocaleDateString("en-US");
-                document.getElementById("txtHireDate2").innerHTML = hireDate2; 
-                
-                let firstName3 = 'Wolfgang';
-                document.getElementById('txtFirstName3').innerHTML = firstName3;
-                let lastName3 = 'Mozart';
-                document.getElementById('txtLastName3').innerHTML = lastName3;
-                let address3 = '600 main st';
-                document.getElementById('txtAddress3').innerHTML = address3;
+                let payRateRec2 = 25.62;
+                payRateRec2 = Number(payRateRec2).toFixed(1);
+                document.getElementById('txtPayRateRec2').innerHTML = payRateRec2;
 
                 
-                let payRate3 = 50.11;
-                payRate3 = Number(payRate3).toFixed(1);
-                document.getElementById('txtPayRate3').innerHTML = payRate3;
+                let hireDateRec2 = d.toLocaleDateString("en-US");
+                document.getElementById("txtHireDateRec2").innerHTML = hireDateRec2; 
+                
+                //Start of Record 3
+                let firstNameRec3 = 'Wolfgang';
+                document.getElementById('txtFirstNameRec3').innerHTML = firstNameRec3;
+                let lastNameRec3 = 'Mozart';
+                document.getElementById('txtLastNameRec3').innerHTML = lastNameRec3;
+                let addressRec3 = '600 main st';
+                document.getElementById('txtAddressRec3').innerHTML = addressRec3;
 
                 
-                let hireDate3 = d.toLocaleDateString("en-US");
-                document.getElementById("txtHireDate3").innerHTML = hireDate3;
+                let payRateRec3 = 50.11;
+                payRateRec3 = Number(payRateRec3).toFixed(1);
+                document.getElementById('txtPayRateRec3').innerHTML = payRateRec3;
+
+                
+                let hireDateRec3 = d.toLocaleDateString("en-US");
+                document.getElementById("txtHireDateRec3").innerHTML = hireDateRec3;
                 
             </script>
         <a class='return-home' href="../index.html">Return</a>
