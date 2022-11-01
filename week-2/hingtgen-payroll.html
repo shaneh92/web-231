@@ -1,4 +1,19 @@
-<!--This is the payroll html document-->
+<!--
+    ========================================================================================================================
+    ; Title: Assignment 2.2 Value and Variables
+    ; Author: Professor Krasso
+    ; Modified by: Shane Hingtgen
+    ; Bellevue University
+    ; Date: 10/25/2022
+    ; Description: In this assignment we learn how to round up to the nearest tenth of a decimal for payroll, learn how to set it to todays date when loaded in, and how to input data from JavaScript into a list in HTML
+    ; Work Cited:
+        Web 231 Assign_2.doc for document.getElementById(“txtFirstNameLudwig”).innerHTML = firstNameVariable;
+            and To round the pay rate to the nearest tenth of the decimal “12.999”.toFixed(1)
+        W3 Schools https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_tolocaledatestring
+        Web 231 HTML, CSS, and JavaScript Requirements
+    
+    ========================================================================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -56,7 +71,7 @@
 
                 //Hire date is set to the local date
                 const d = new Date(); //only need to declare the const once
-                let hireDateRec1 = d.toLocaleDateString("en-US");//W3 Schools. (n.d.-b). JavaScript Date toLocaleDateString(). Retrieved October 25, 2022, from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_tolocaledatestring used this to get started
+                let hireDateRec1 = d.toLocaleDateString("en-US");
                 document.getElementById("txtHireDateRec1").innerHTML = hireDateRec1;
 
                 //Start of Record 2

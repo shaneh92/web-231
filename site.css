@@ -1,4 +1,17 @@
-/* This is the global css document for all assignments and exercises*/
+/*
+    ========================================================================================================================
+    ; Title: Assignment 1.3 Environment Setup
+    ; Author: Professor Krasso
+    ; Modified by: Shane Hingtgen
+    ; Bellevue University
+    ; Date: 10/18/2022
+    ; Description: In this assignment we created an index page, in the index page we link all of our class assignments
+    ; Work Cited: 
+        Web 231 Assign_1 doc
+        Web 231 HTML, CSS, and JavaScript Requirements
+    
+    ========================================================================================================================
+  */ 
 body {
     font-family: 'Oswald';
 }

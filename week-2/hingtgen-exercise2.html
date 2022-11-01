@@ -1,4 +1,18 @@
-<!DOCTYPE html> <!--This is an html document-->
+<!--
+    ========================================================================================================================
+    ; Title: Assignment 2.2 Hello JavaScript
+    ; Author: Professor Krasso
+    ; Modified by: Shane Hingtgen
+    ; Bellevue University
+    ; Date: 10/24/2022
+    ; Description: This assignment we learn to create onclick messages
+    ; Work Cited:
+    W3 Schools onclick https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onclick
+    W3 Schools innerHTML https://www.w3schools.com/js/tryit.asp?filename=tryjs_whereto
+    Web 231 HTML, CSS, and JavaScript Requirements
+    ========================================================================================================================
+-->
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Web 231 - Enterprise JavaSCript I</title>
@@ -15,8 +29,7 @@
     <body>
         <div id="container">
             <h1>Exercise 2.2 - Hello JavaScript</h1>
-            <!--The Start of the internal JavaScript inside html-->
-            <!-- W3Schools. (n.d.). onclick Event. Retrieved October 24, 2022, from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onclick Cite for the Button that pops a window up for what class im taking-->
+            <!--The Start of the JavScript for the onclick function-->
             <button id ='btnMyCourse' onclick="myFunction()">What course am I taking?</button>
 
             <script>
@@ -24,13 +37,13 @@
                 alert("Web 231 - Enterprise JavaScript I");
                 }
             </script>
-            <!--W3Schools. (n.d.-a). JavaScript Where To. Retrieved October 24, 2022, from https://www.w3schools.com/js/tryit.asp?filename=tryjs_whereto Cite for the innerHTML-->
+            <!--This script is for the innerHTML-->
             <p id="myCourse"></p>
 
             <script>
                 document.getElementById("myCourse").innerHTML = "You are now in Hingtgen's world!";
             </script>
-            <!--end of the internal JS-->
+            <!--The return home button to return to the index-->
             <a class='return-home' href="../index.html">Return</a>
         </div>
     </body>
