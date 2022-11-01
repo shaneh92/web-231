@@ -8,7 +8,32 @@
     ; Description: This assignment is to create a Fahrenheit to Celsius conversion app, this is the css document
     ; Work Cited:
         Web 231 HTML, CSS, and JavaScript Requirements
-        
+        Web 231 Assign_3
+        W3 Schools HTML Forms https://www.w3schools.com/html/html_forms.asp
     ========================================================================================================================
   */ 
+  body {
+    font-size: 28px;
+  }
+
+  #app-header {
+    text-align: center;
+  }
   
+  .card-title {
+    box-shadow: 0 8px  16px rgba(0, 0, 0, .2);
+  }
+h2 {
+    text-align: center;
+    color: #4F3674;
+}
+input[type=submit] {
+    color: white;
+    background-color: #4F3674;
+    text-align: center;
+}
+input {
+    display: inline-block;
+
+
+}

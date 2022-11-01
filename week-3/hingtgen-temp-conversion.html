@@ -8,7 +8,9 @@
     ; Description: This assignment is to create a Fahrenheit to Celsius conversion app, this is the html document
     ; Work Cited:
         Web 231 HTML, CSS, and JavaScript Requirements
-        
+        Web 231 Assign_3
+        W3 Schools HTML Forms https://www.w3schools.com/html/html_forms.asp
+
     ========================================================================================================================
 -->
 <!DOCTYPE html>
@@ -24,9 +26,24 @@
     <body>
         <div id="container">
             <h1 id="app-header">Welcome to the Temperature Conversion App!</h1>
-            <div class="card title">
+            <div class="card-title">
+                
                 <h2>Fahrenheit to Celsius Converter</h2>
+                <!--Creating the initial form for the converter-->
+                <form action="">
+                    <label for="txtFahrenheit">Fahrenheit Value:</label><br>
+                    <input type="text" id="txtFahrenheit" name="txtFahrenheit" value=""><br>
+                    <input type="submit" value="Convert Temperature">
+                  </form>
                 
             </div>
+
+            <div class="card-title">
+                <h2>Conversion Results</h2>
+                <script>
+                    document.getElementById("txtFarhenheit").innerHTML
+                </script>
+            </div>
+            <a class='return-home' href="../index.html">Return</a>
         </div>
     </body>
