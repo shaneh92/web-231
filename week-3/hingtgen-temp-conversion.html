@@ -9,7 +9,9 @@
     ; Work Cited:
         Web 231 HTML, CSS, and JavaScript Requirements
         Web 231 Assign_3
-        W3 Schools HTML Forms https://www.w3schools.com/html/html_forms.asp
+        W3 Schools https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_oninput 
+        W3 Schools 
+        W3 Schools https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
     ========================================================================================================================
 -->
@@ -21,29 +23,57 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
         <link href="hingtgen-temp-conversion.css" type="text/css"
-                rel="stylesheet" /> 
+                rel="stylesheet" />
+        <link href="../global.css" type="text/css"
+                rel="stylesheet" />  
         <!--css document and the chosen fonts for the class-->  
     <body>
+         <!--form created with button-->
         <div id="container">
-            <h1 id="app-header">Welcome to the Temperature Conversion App!</h1>
-            <div class="card-title">
-                
-                <h2>Fahrenheit to Celsius Converter</h2>
-                <!--Creating the initial form for the converter-->
-                <form action="">
-                    <label for="txtFahrenheit">Fahrenheit Value:</label><br>
-                    <input type="text" id="txtFahrenheit" name="txtFahrenheit" value=""><br>
-                    <input type="submit" value="Convert Temperature">
-                  </form>
-                
-            </div>
+           
+            <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
 
-            <div class="card-title">
-                <h2>Conversion Results</h2>
-                <script>
-                    document.getElementById("txtFarhenheit").innerHTML
-                </script>
-            </div>
+                <div id="form-temp">
+                    <div class="card">
+                        <div class="card-title">Fahrenheit to Celsius Converter</div>
+                        <div class="card-content">
+                            <div class="form">
+                                <div class="form-field">
+                                        <label for="txtFahrenheit">Fahrenheit Value:</label>
+                                        <input type="text" class="input" id="txtFahrenheit" name="Fahrenheit"/>
+                                </div>
+                                    <div class="form-field">
+                                        <button class="btn btn-primary full-width" id="tempBtn">Convert Temperature</button>
+                                </div> 
+           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--This is the results card, it will show the results from the equation above-->
+                <div id="form-results">
+                    <div class="card">
+                        <div class="card-title">Conversion Results</div>
+                        <div class="card-content">
+                            <p id="temp">
+                                <!--When you type in a value and hit submit it will process the formula to convert Fahrenheit to Celsius-->
+                                <script>
+                                const element = document.getElementById("tempBtn");
+                                element.addEventListener("click", getCelcius);
+                                
+                                function getCelcius() {
+                                  let fahrenheit = document.getElementById("txtFahrenheit").value;
+                                  let celsius = (((fahrenheit) - 32) / 1.8).toFixed(2);
+                                  document.getElementById("temp").innerHTML = celsius;
+                                 
+                                }
+                                </script>
+                        </div>
+                    </div>
+                </div>
+  
+            
             <a class='return-home' href="../index.html">Return</a>
         </div>
     </body>
