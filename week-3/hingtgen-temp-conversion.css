@@ -17,8 +17,8 @@ body {
 }
 #container {
   padding: 10px;
-
 }
+
 .form {
   display: inline-grid;
   grid-template-columns: auto;
@@ -29,14 +29,12 @@ body {
 #form-temp {
   width: 600px;
   margin: 3% auto 0;
-
 }
 
 #form-results {
   width: 600px;
   margin: 3% auto 0;
   text-align: center;
-  
 }
 
 .app-header {
@@ -55,7 +53,6 @@ body {
 .card-title {
   text-align: center;
   color: #4F3674;
-
 }
 
 .btn {
@@ -79,5 +76,4 @@ body {
 
 .return-home {
   float: left;
-  
 }
