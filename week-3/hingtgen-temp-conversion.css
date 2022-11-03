@@ -17,7 +17,7 @@
   display: inline-grid;
   grid-template-columns: auto;
   padding: 10px;
-  font-size: 28px;
+  
 
 }
 
@@ -25,12 +25,10 @@
 #form-temp {
   width: 600px;
   margin: 3% auto 0;
-  font-size: 28px;
 }
 
 .app-header {
   text-align: center;
-  font-size: 28px;
 }
   
 .return-home {
@@ -40,6 +38,9 @@
 #form-results {
   width: 600px;
   margin: 3% auto 0;
-  font-size: 28px;
   text-align: center;
+}
+
+#temp {
+  font-size: 28px;
 }
