@@ -12,68 +12,33 @@
     
     ========================================================================================================================
   */ 
-body {
-    font-size: 28px;
-}
-#container {
-  padding: 10px;
-}
 
 .form {
   display: inline-grid;
   grid-template-columns: auto;
   padding: 10px;
+  font-size: 28px;
+
 }
 
 
 #form-temp {
   width: 600px;
   margin: 3% auto 0;
+  font-size: 28px;
+}
+
+.app-header {
+  text-align: center;
+  font-size: 28px;
+}
+  
+.return-home {
+  float: left;
 }
 
 #form-results {
   width: 600px;
   margin: 3% auto 0;
-  text-align: center;
-}
-
-.app-header {
-  text-align: center;
-}
-  
-.card {
-  box-shadow: 0 8px  16px rgba(0, 0, 0, .2);
-  width: 600px;
-  margin: 3% auto 0;
-  display: inline-grid;
-  grid-template-columns: auto;
-  padding: 10px;
-}
-
-.card-title {
-  text-align: center;
-  color: #4F3674;
-}
-
-.btn {
-  color: white;
-  background-color: #4F3674;
-  text-align: center;
-  padding: 10px;
-  text-decoration: none;
-  border: none;
-  border-radius: 6px;
-}
-
-.full-width {
-  width: 100%;
-}
-
-.btn-primary:hover {
-  background-color: #d6a800;
-  color: #4F3674;
-}
-
-.return-home {
-  float: left;
+  font-size: 28px;
 }
