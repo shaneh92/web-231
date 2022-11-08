@@ -59,14 +59,14 @@
                             <p id="result">
                                 <!--When you type in a value and hit submit it will process the script to check if number selected is the random number const rnd = math.floor((math.random() * 10) +1);-->
                                 <script>
-                                const element = document.getElementById("btnSubmit");
+                                const rnd = Math.floor((Math.random() * 10) +1); // Generates a random number between 1 and 10 must be before the function in order to keep the same number, refresh to reset random number
+                                const element = document.getElementById("btnSubmit"); // Gets the input from the form when submitted
                                 element.addEventListener("click",  randomNumber);
                                 
                                 function randomNumber() {
-                                 let myNumber = document.getElementById("txtMyNumber").value; 
-                                 const rnd = Math.floor((Math.random() * 10) +1); // Generates a random number between 1 and 10 (myNumber > rnd)
+                                 let myNumber = document.getElementById("txtMyNumber").value;                                
                                  let message;
-
+                                 // This if else statement provides a message depending on if your are greater than, less than or equal to the number from rnd that was inputted into the form
                                  if (myNumber == rnd) {
                                     message = "Congratulations! You picked the correct number!";
 
@@ -79,13 +79,14 @@
                                     message = "The number is less than " + myNumber;
                                  }
                                  else  {
-                                    message = "Pick a number between 1 and 10"
+                                    message = "Pick a number between 1 and 10" // Currently doesn't display this message
 
                                  }
                                  
-                                  document.getElementById("result").innerHTML = message;
+                                  document.getElementById("result").innerHTML = message; // This line gives us which message and its assigned to the results card
                                 }
                                 // This was a great use of using console.log(rnd) to check if the statement worked
+                                console.log(rnd)
                                 </script>
                                 
                         </div>
