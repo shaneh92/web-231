@@ -1,0 +1,99 @@
+<!--
+    ========================================================================================================================
+    ; Title: Assignment 4.2 Number Guessing Game
+    ; Author: Professor Krasso
+    ; Modified by: Shane Hingtgen
+    ; Bellevue University
+    ; Date: 10/31/2022
+    ; Description: The purpose of this assignment is to create a number guessing game 1-10, you input a number and it returns if
+        It is greater than or less then the number, or equal to
+    ; Work Cited:
+        Web 231 HTML, CSS, and JavaScript Requirements
+        Web 231 Assign_4
+        
+
+    ========================================================================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web 231 - Enterprise JavaSCript I</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="hingtgen-number-game.css" type="text/css"
+                rel="stylesheet" />
+        <link href="../global.css" type="text/css"
+                rel="stylesheet" />  
+        <!--css document and the chosen fonts for the class-->  
+    <body>
+         <!--form created with button-->
+        <div id="container">
+           
+            <h1 class="app-header">Welcome to the numbers game!</h1>
+
+                <div id="form-temp">
+                    <div class="card">
+                        <div class="card-title">Pick a number between 1 and 10</div>
+                        <br>
+                        <div class="card-content">
+                            <div class="form">
+                                <div class="form-field">
+                                        <label for="txtMyNumber">Guess the number:</label>
+                                        <input type="text" class="input" id="txtMyNumber" name="myNumber">
+                                </div>                   
+                                    <div class="form-field">
+                                        <button class="btn btn-primary full-width" id="btnSubmit">Submit</button>
+                                </div> 
+           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--This is the results card, it will show the results from the equation below-->
+                <div id="form-results">
+                    <div class="card">
+                        <div class="card-title">Results</div>
+                        <div class="card-content">
+                            <p id="result">
+                                <!--When you type in a value and hit submit it will process the script to check if number selected is the random number const rnd = math.floor((math.random() * 10) +1);-->
+                                <script>
+                                const element = document.getElementById("btnSubmit");
+                                element.addEventListener("click",  randomNumber);
+                                
+                                function randomNumber() {
+                                 let myNumber = document.getElementById("txtMyNumber").value; 
+                                 const rnd = Math.floor((Math.random() * 10) +1); // Generates a random number between 1 and 10 (myNumber > rnd)
+                                 let message;
+
+                                 if (myNumber == rnd) {
+                                    message = "Congratulations! You picked the correct number!";
+
+                                 }
+                                 else if (myNumber < rnd) {
+                                    message = "The number is greater than " + myNumber;
+
+                                 }
+                                 else if (myNumber > rnd) {
+                                    message = "The number is less than " + myNumber;
+                                 }
+                                 else  {
+                                    message = "Pick a number between 1 and 10"
+
+                                 }
+                                 
+                                  document.getElementById("result").innerHTML = message;
+                                }
+                                // This was a great use of using console.log(rnd) to check if the statement worked
+                                </script>
+                                
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <a class='return-home' href="../index.html">Return</a>
+
+                </div>
+        </div>
+    </body>

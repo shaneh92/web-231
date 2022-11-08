@@ -1,0 +1,48 @@
+/*
+    ========================================================================================================================
+    ; Title: Assignment 4.2 Number Guessing Game
+    ; Author: Professor Krasso
+    ; Modified by: Shane Hingtgen
+    ; Bellevue University
+    ; Date: 10/31/2022
+    ; Description: The purpose of this assignment is to create a number guessing game 1-10, you input a number and it returns if
+        It is greater than or less then the number, or equal to
+    ; Work Cited:
+        Web 231 HTML, CSS, and JavaScript Requirements
+        Web 231 Assign_4
+        
+    
+    ========================================================================================================================
+  */ 
+
+.form {
+  display: inline-grid;
+  grid-template-columns: auto;
+  padding: 10px;
+  
+
+}
+
+
+#form-temp {
+  width: 600px;
+  margin: 3% auto 0;
+}
+
+.app-header {
+  text-align: center;
+}
+  
+.return-home {
+  float: left;
+}
+
+#form-results {
+  width: 600px;
+  margin: 3% auto 0;
+  text-align: center;
+}
+
+#temp {
+  font-size: 28px;
+}
