@@ -13,6 +13,22 @@
     ========================================================================================================================
   */ 
 
+
+.app-header {
+  text-align: center;
+}
+  
+/* the classes and ID's below are now found on ../global.css added not only to reference what would go here if we didnt have multiple assignments using the same card formats
+#form-results {
+  width: 600px;
+  margin: 3% auto 0;
+  text-align: center;
+}
+
+#temp {
+  font-size: 28px;
+}
+
 .form {
   display: inline-grid;
   grid-template-columns: auto;
@@ -26,21 +42,4 @@
   width: 600px;
   margin: 3% auto 0;
 }
-
-.app-header {
-  text-align: center;
-}
-  
-.return-home {
-  float: left;
-}
-
-#form-results {
-  width: 600px;
-  margin: 3% auto 0;
-  text-align: center;
-}
-
-#temp {
-  font-size: 28px;
-}
+*/ 

@@ -108,5 +108,33 @@
 
 .app-header {
     text-align: center;
+    /* centers the title for the web page*/
+  }
+
+  
+  /* classes and ID's below are from as of 11/08/22 from assignments 3.2 & 4.2, added here as part of DRY Don't Repeat Yourself */
+  #form-results {
+    width: 600px;
+    margin: 3% auto 0;
+    text-align: center;
+    /* This is where the card will display its results that were inputted in #form-temp */
+  }
+  
+  #temp {
+    font-size: 28px;
+    /* Font sized for the results in the results card */
+  }
+  .form {
+    display: inline-grid; 
+    grid-template-columns: auto;
+    padding: 10px;
+    /* This is to get the form to look good*/
+  }
+  
+  /* after this is submited I want to try and add #form-results and #form-temp to global for don't repeat your self*/
+  #form-temp {
+    width: 600px;
+    margin: 3% auto 0;
+    /* This is for the first card with the form and button in it*/
   }
   

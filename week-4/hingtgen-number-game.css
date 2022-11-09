@@ -15,39 +15,34 @@
     ========================================================================================================================
   */ 
 
-.form {
-  display: inline-grid; 
-  grid-template-columns: auto;
-  padding: 10px;
-  /* This is to get the form to look good*/
-}
 
-/* after this is submited I want to try and add #form-results and #form-temp to global for don't repeat your self*/
-#form-temp {
-  width: 600px;
-  margin: 3% auto 0;
-  /* This is for the first card with the form and button in it*/
-}
-
-.app-header {
-  text-align: center;
-  /* centers the title for the web page*/
-}
   
 .return-home {
   float: left;
   /* Had to do this in order to get the Return link to be in line of the cards left edge*/
 }
-
-
+/* the classes and ID's below are now found on ../global.css added not only to reference what would go here if we didnt have multiple assignments using the same card formats
 #form-results {
   width: 600px;
   margin: 3% auto 0;
   text-align: center;
-  /* This is where the card will display its results that were inputted in #form-temp */
 }
 
 #temp {
   font-size: 28px;
-  /* Font sized for the results in the results card */
 }
+
+.form {
+  display: inline-grid;
+  grid-template-columns: auto;
+  padding: 10px;
+  
+
+}
+
+
+#form-temp {
+  width: 600px;
+  margin: 3% auto 0;
+}
+*/ 
