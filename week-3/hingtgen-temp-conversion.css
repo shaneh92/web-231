@@ -14,10 +14,10 @@
   */ 
 
 
-.app-header {
-  text-align: center;
-  /* Had to do this in order to get the Return link to be in line of the cards left edge*/
-}
+  .return-home {
+    float: left;
+    /* Had to do this in order to get the Return link to be in line of the cards left edge*/
+  }
   
 /* the classes and ID's below are now found on ../global.css added not only to reference what would go here if we didn't have multiple assignments using the same card formats
 #form-results {
