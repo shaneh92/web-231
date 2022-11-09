@@ -111,7 +111,7 @@
     /* centers the title for the web page*/
   }
 
-  
+
   /* classes and ID's below are from as of 11/08/22 from assignments 3.2 & 4.2, added here as part of DRY Don't Repeat Yourself */
   #form-results {
     width: 600px;
@@ -131,7 +131,6 @@
     /* This is to get the form to look good*/
   }
   
-  /* after this is submited I want to try and add #form-results and #form-temp to global for don't repeat your self*/
   #form-temp {
     width: 600px;
     margin: 3% auto 0;
