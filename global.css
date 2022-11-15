@@ -120,7 +120,7 @@
     /* This is where the card will display its results that were inputted in #form-temp */
   }
   
-  #temp {
+  #temp, #result {
     font-size: 28px;
     /* Font sized for the results in the results card */
   }
@@ -137,3 +137,12 @@
     /* This is for the first card with the form and button in it*/
   }
   
+  .drop-down-menu {
+    padding: 12px 20px;
+    margin:  8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* this is the style for the drop-down-menu class within the form-field card for assignment 5.2 */
+}
