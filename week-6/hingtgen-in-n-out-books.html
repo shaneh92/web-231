@@ -1,0 +1,215 @@
+<!--
+    ========================================================================================================================
+    ; Title: Assignment 6.2 In-N-Out-Books
+    ; Author: Professor Krasso
+    ; Modified by: Shane Hingtgen
+    ; Bellevue University
+    ; Date: 11/21/2022
+    ; Description: 
+    ; Work Cited: This assignment is to learn how to create object literals in JavaScript
+        Web 231 HTML, CSS, and JavaScript Requirements
+        Web 231 Assign_6
+        W3 Schools https://www.w3schools.com/js/js_objects.asp examples of object literals
+        W3 Schools https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp to toggle the data
+
+
+    ========================================================================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web 231 - Enterprise JavaSCript I</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="hingtgen-in-n-out-books.css" type="text/css"
+                rel="stylesheet" />
+        <link href="../global.css" type="text/css"
+                rel="stylesheet" />  
+        <!--css document and the chosen fonts for the class-->  
+    <body>
+         <!--form created with button-->
+        <div id="container">
+           
+            <h1 class="app-header">Welcome to In-N-Out-Books</h1>
+
+                <div id="form-temp">
+                    <div class="card">
+                        <div class="card-title">My Favorites</div>
+                        <br>
+                        <div class="card-content">
+                            <div class="form">
+                                <div class="form-field">
+                                    <!--This drop down menu provides the values for the script below-->
+                                    <label for="sequence">Choose a listing:</label> 
+
+                                    <select name="favoriteList" id="favoriteList" class="drop-down-menu">
+                                      <option value="select">--Select--</option>
+                                      <option value="books">Top 3 Favorite Books</option>
+                                      <option value="authors">Top 3 Favorite Authors</option>
+                                    </select>
+                                </div>                   
+                                    <div class="form-field">
+                                        <button class="btn btn-primary full-width" id="btnDisplayListing">Display Listing</button>
+                                </div> 
+           
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <a class='return-home' href="../index.html">Return</a>
+                </div>
+
+                <!--This is the results card, it will show the results from the equation below-->
+                <div id="form-results">
+                    <div class="card">
+                        <div class="favorite-books"></div>
+                        <div class="card-content">
+                            <p id="result">
+                                <div id="books">
+                                
+                                <table id="fav-table">
+                                    <h1>Top 3 Favorite Books</h1>
+                                    <tr>
+                                      <th>ISBN</th>
+                                      <th>Title</th>
+                                      <th>Pages</th>
+                                    </tr>
+                                    <tr>
+                                      <td id="txtIsbnTomSawyer"></td>
+                                      <td id="txtTitleTomSawyer"></td>
+                                      <td id="txtPagesTomSawyer"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="txtIsbnHuckFin"></td>
+                                        <td id="txtTitleHuckFin"></td>
+                                        <td id="txtPagesHuckFin"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="txtIsbnRedFern"></td>
+                                        <td id="txtTitleRedFern"></td>
+                                        <td id="txtPagesRedFern"></td>
+                                    </tr>
+                                    </table>
+                                    </div>
+
+                                    <div id="authors">
+                                    <table id="fav-table">
+                                        <h1>Top 3 Favorite Authors</h1>
+                                        <tr>
+                                          <th>Name</th>
+                                          <th>Genre</th>
+                                        </tr>
+                                        <tr>
+                                          <td id="txtNameTwain"></td>
+                                          <td id="txtGenreTwain"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id="txtNamePunke"></td>
+                                            <td id="txtGenrePunke"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id="txtNameTolkien"></td>
+                                            <td id="txtGenreTolkien"></td>
+                                        </tr>
+                                    </table>
+                                        </div>
+                        </div>
+
+
+                    <script>
+                        const element = document.getElementById("btnDisplayListing"); // is the button to grab the selection info
+                        element.addEventListener("click",  bookResults);
+                        const books1 = {
+                            isbn: "1954839448",
+                            title: "The Adventures of Tom Sawyer",
+                            pages: 217
+                        }
+
+                        const books2 = {
+                            isbn: "195483943",
+                            title: "The Adventures of Huckleberry Finn",
+                            pages: 333
+                        }
+
+                        const books3 = {
+                            isbn: "0307742539",
+                            title: "Where the Red Fern Grows",
+                            pages: 304
+                        }
+
+                        const author1 = {
+                            name: "Mark Twain",
+                            genre: "Picaresque Novel"
+                        }
+
+                        const author2 = {
+                            name: "Michael Punke",
+                            genre: "Historical Fiction"
+                        }
+
+                        const author3 = {
+                            name: "J. R. R. Tolkien",
+                            genre: "Fantasy"
+                        }
+
+                        // T
+                        function bookResults() {
+                            let choice = document.getElementById("favoriteList").value;
+                            var book = document.getElementById("result");
+                            var authors = document.getElementById("result");
+                            if (choice == "select") {
+                                book.style.display = "none";
+                                authors.style.display = "none";
+                            }
+                            else if (choice == "books") {
+                                authors.style.display = "block";
+                                book.style.display = "none";
+
+
+                                    //this information is from the const book1 and displays information to the HTML table
+                                    document.getElementById('txtIsbnTomSawyer').innerHTML = books1["isbn"];
+                                    document.getElementById('txtTitleTomSawyer').innerHTML = books1["title"];
+                                    document.getElementById('txtPagesTomSawyer').innerHTML = books1["pages"];
+
+                                    //this information is from the const book2 and displays information to the HTML table
+                                    document.getElementById('txtIsbnHuckFin').innerHTML = books2["isbn"];
+                                    document.getElementById('txtTitleHuckFin').innerHTML = books2["title"];
+                                    document.getElementById('txtPagesHuckFin').innerHTML = books2["pages"];
+
+                                    //this information is from the const book3 and displays information to the HTML table
+                                    document.getElementById('txtIsbnRedFern').innerHTML = books3["isbn"];
+                                    document.getElementById('txtTitleRedFern').innerHTML = books3["title"];
+                                    document.getElementById('txtPagesRedFern').innerHTML = books3["pages"];
+                            }
+                            else if (choice == "authors") {
+                                book.style.display = "block";
+                                authors.style.display = "none";
+
+  
+                                //this information is from the const author1 and displays information to the HTML table
+                                    document.getElementById('txtNameTwain').innerHTML = author1["name"];
+                                    document.getElementById('txtGenreTwain').innerHTML = author1["genre"];
+
+                                    //this information is from the const author2 and displays information to the HTML table
+                                    document.getElementById('txtNamePunke').innerHTML = author2["name"];
+                                    document.getElementById('txtGenrePunke').innerHTML = author2["genre"];
+
+                                    //this information is from the const author3 and displays information to the HTML table
+                                    document.getElementById('txtNameTolkien').innerHTML = author3["name"];
+                                    document.getElementById('txtGenreTolkien').innerHTML = author3["genre"];
+                            }
+                            
+
+                            else {
+
+                            }
+                        }
+
+                        </script>
+                    
+
+                </div>
+        </div>
+    </body>
