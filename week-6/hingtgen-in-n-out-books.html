@@ -6,12 +6,14 @@
     ; Bellevue University
     ; Date: 11/21/2022
     ; Description: 
-    ; Work Cited: This assignment is to learn how to create object literals in JavaScript
+    ; Work Cited: This assignment is to learn how to create objects in JavaScript and apply them into a table in html
         Web 231 HTML, CSS, and JavaScript Requirements
         Web 231 Assign_6
-        W3 Schools https://www.w3schools.com/js/js_objects.asp examples of object literals
+        W3 Schools https://www.w3schools.com/js/js_objects.asp examples of objects
         W3 Schools https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp to toggle the data
-
+        W3 Schools https://www.w3schools.com/html/html_tables.asp a good refresher on table structure
+        WEB 200 Assignment 9.2 Part 6 helped with how tables the css to make it an organized layout
+        WEB 231 Assignment 2.3 Values and Variables used this to reference how to get data from javascript added into html
 
     ========================================================================================================================
 -->
@@ -61,14 +63,13 @@
                     <a class='return-home' href="../index.html">Return</a>
                 </div>
 
-                <!--This is the results card, it will show the results from the equation below-->
+                <!--This is the results card, it will show the results from the script below based on the selection above-->
                 <div id="form-results">
                     <div class="card">
-                        <div class="favorite-books"></div>
-                        <div class="card-content">
-                            <p id="result">
+
+                        
+                                <!--Books table-->
                                 <div id="books">
-                                
                                 <table id="fav-table">
                                     <h1>Top 3 Favorite Books</h1>
                                     <tr>
@@ -94,6 +95,7 @@
                                     </table>
                                     </div>
 
+                                    <!--Authors table-->
                                     <div id="authors">
                                     <table id="fav-table">
                                         <h1>Top 3 Favorite Authors</h1>
@@ -115,12 +117,14 @@
                                         </tr>
                                     </table>
                                         </div>
-                        </div>
+                        
 
-
+                                    
                     <script>
                         const element = document.getElementById("btnDisplayListing"); // is the button to grab the selection info
                         element.addEventListener("click",  bookResults);
+
+                        // These are the objects for books that will be assigned to one of the tables
                         const books1 = {
                             isbn: "1954839448",
                             title: "The Adventures of Tom Sawyer",
@@ -138,7 +142,7 @@
                             title: "Where the Red Fern Grows",
                             pages: 304
                         }
-
+                        // These are the objects for authors that will be assigned to one of the tables
                         const author1 = {
                             name: "Mark Twain",
                             genre: "Picaresque Novel"
@@ -153,19 +157,26 @@
                             name: "J. R. R. Tolkien",
                             genre: "Fantasy"
                         }
-
-                        // T
+                        
+                        //Assigning variables for the tables
+                        let book = document.getElementById("books");
+                        let authors = document.getElementById("authors");
+                            
+                                
+                                book.style.display = "none"; //Both of these are required to keep the tables from showing up on page load
+                                authors.style.display = "none";
+                        // This function for if else if allows the information to be placed in the correct table fields
                         function bookResults() {
-                            let choice = document.getElementById("favoriteList").value;
-                            var book = document.getElementById("result");
-                            var authors = document.getElementById("result");
-                            if (choice == "select") {
+                            let choice = document.getElementById("favoriteList").value; // choice is based on the drop down menu above 
+                            
+                            if (choice == "select") { //once selected it makes the tables disappear if they have already had a selection
                                 book.style.display = "none";
                                 authors.style.display = "none";
                             }
-                            else if (choice == "books") {
-                                authors.style.display = "block";
-                                book.style.display = "none";
+                            else if (choice == "books") { // once selected this will show the books table and stop the authors table from showing
+                                authors.style.display = "none";
+                                book.style.display = "block";
+                                
 
 
                                     //this information is from the const book1 and displays information to the HTML table
@@ -183,9 +194,11 @@
                                     document.getElementById('txtTitleRedFern').innerHTML = books3["title"];
                                     document.getElementById('txtPagesRedFern').innerHTML = books3["pages"];
                             }
-                            else if (choice == "authors") {
-                                book.style.display = "block";
-                                authors.style.display = "none";
+
+                            else if (choice == "authors") { // once selected this will show the authors table and stop the books table from showing 
+                                authors.style.display = "block";
+                                book.style.display = "none";
+                                
 
   
                                 //this information is from the const author1 and displays information to the HTML table
@@ -204,6 +217,7 @@
 
                             else {
 
+                                
                             }
                         }
 

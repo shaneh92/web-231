@@ -6,12 +6,14 @@
     ; Bellevue University
     ; Date: 11/21/2022
     ; Description: 
-    ; Work Cited: This assignment is to learn how to create object literals in JavaScript
+    ; Work Cited: This assignment is to learn how to create objects in JavaScript and apply them into a table in html
         Web 231 HTML, CSS, and JavaScript Requirements
         Web 231 Assign_6
-        W3 Schools https://www.w3schools.com/js/js_objects.asp examples of object literals
+        W3 Schools https://www.w3schools.com/js/js_objects.asp examples of objects
         W3 Schools https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp to toggle the data
-
+        W3 Schools https://www.w3schools.com/html/html_tables.asp a good refresher on table structure
+        WEB 200 Assignment 9.2 Part 6 helped with how tables the css to make it an organized layout
+        WEB 231 Assignment 2.3 Values and Variables used this to reference how to get data from javascript added into html
 
     ========================================================================================================================
   */ 
@@ -22,6 +24,7 @@
     float: left;
     /* Had to do this in order to get the Return link to be in line of the cards left edge*/
   }
+  
   h1 {
     color: #4f3674;
     
