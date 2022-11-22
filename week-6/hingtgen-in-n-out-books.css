@@ -29,9 +29,14 @@
 }
 
 h1 {
+    text-align: center;
     color: #4f3674;
-    
+    font-weight: 400;
+    font-size: 2em;
+    /*the table title*/
   }
+
+/*All this information below is for the table*/
 table  {
     border-collapse: collapse;
     width: 100%;
