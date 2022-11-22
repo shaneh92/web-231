@@ -43,7 +43,7 @@
                             <div class="form">
                                 <div class="form-field">
                                     <!--This drop down menu provides the values for the script below-->
-                                    <label for="sequence">Choose a listing:</label> 
+                                    <label for="favoriteList">Choose a listing:</label> 
 
                                     <select name="favoriteList" id="favoriteList" class="drop-down-menu">
                                       <option value="select">--Select--</option>
@@ -66,12 +66,13 @@
                 <!--This is the results card, it will show the results from the script below based on the selection above-->
                 <div id="form-results">
                     <div class="card">
-
+                        <div class="card-title"></div>
+                        <div class="card-content" id="books">
                         
                                 <!--Books table-->
-                                <div id="books">
-                                <table id="fav-table">
+                                <!--<div id="books">-->
                                     <h1>Top 3 Favorite Books</h1>
+                                <table>
                                     <tr>
                                       <th>ISBN</th>
                                       <th>Title</th>
@@ -96,9 +97,9 @@
                                     </div>
 
                                     <!--Authors table-->
-                                    <div id="authors">
-                                    <table id="fav-table">
+                            <div class= "card-content" id="authors">
                                         <h1>Top 3 Favorite Authors</h1>
+                                    <table>
                                         <tr>
                                           <th>Name</th>
                                           <th>Genre</th>
@@ -117,7 +118,7 @@
                                         </tr>
                                     </table>
                                         </div>
-                        
+                        </div>
 
                                     
                     <script>
@@ -161,7 +162,6 @@
                         //Assigning variables for the tables
                         let book = document.getElementById("books");
                         let authors = document.getElementById("authors");
-                            
                                 
                                 book.style.display = "none"; //Both of these are required to keep the tables from showing up on page load
                                 authors.style.display = "none";
@@ -172,6 +172,8 @@
                             if (choice == "select") { //once selected it makes the tables disappear if they have already had a selection
                                 book.style.display = "none";
                                 authors.style.display = "none";
+                                
+                                
                             }
                             else if (choice == "books") { // once selected this will show the books table and stop the authors table from showing
                                 authors.style.display = "none";
@@ -225,5 +227,6 @@
                     
 
                 </div>
+            </div>
         </div>
     </body>

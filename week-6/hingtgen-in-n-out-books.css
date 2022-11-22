@@ -20,38 +20,43 @@
 
 
   
-  .return-home {
+.return-home {
     float: left;
     /* Had to do this in order to get the Return link to be in line of the cards left edge*/
   }
-  
-  h1 {
+.card {
+  margin-left: 10px;
+}
+
+h1 {
     color: #4f3674;
     
   }
-  #fav-table  {
+table  {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 30px;
 }
 
-#fav-table  th {
+table  th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
     background-color: #4f3674;
     color: white;
+
 }
 
-#fav-table  th, #fav-table  td {
+table  th, table  td {
     border: 1px solid #ddd;
     padding: 8px;
+    text-align: left;
 }
 
-#fav-table tr:hover {
+table tr:hover {
     background-color: #d6a800;
     color: #4f3674;
     cursor: pointer;
+    /*for the gold hover with your pointer */
 }
   /* the classes and ID's below are found on ../global.css added not only to reference what would go here if we didn't have multiple assignments using the same card formats part of D.R.Y.
   #form-results {
