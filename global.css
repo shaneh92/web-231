@@ -146,3 +146,31 @@
     box-sizing: border-box;
     /* this is the style for the drop-down-menu class within the form-field card for assignment 5.2 */
 }
+
+/* tables were brought over from 6.2 and 7.2 as to not to not repeat*/
+table  {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+table  th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4f3674;
+  color: white;
+
+}
+
+table  th, table  td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table tr:hover {
+  background-color: #d6a800;
+  color: #4f3674;
+  cursor: pointer;
+  /*for the gold hover with your pointer */
+}

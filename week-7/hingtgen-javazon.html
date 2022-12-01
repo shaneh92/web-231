@@ -5,12 +5,13 @@
     ; Modified by: Shane Hingtgen
     ; Bellevue University
     ; Date: 11/28/2022
-    ; Description: This assignment is to learn how to create classes in JavaScript and apply them into a table in html
+    ; Description: This assignment is to learn how to create classes in JavaScript and apply them into a table in html with a switch statement
     ; Work Cited: 
         Web 231 HTML, CSS, and JavaScript Requirements
+        Web 231 Assign_6 previous assignment used as an example
         Web 231 Assign_7
-
-
+        W3 Schools https://www.w3schools.com/js/js_classes.asp javascript classes
+        W3 Schools https://www.w3schools.com/js/js_switch.asp switch statements
     ========================================================================================================================
 -->
 <!DOCTYPE html>
@@ -66,326 +67,321 @@
                         <div class="card-title"></div>
                         <div class="card-content" id="products">
                         
-                                <!--Books table-->
-                                    <h1>Javazon Products</h1>
-                                <table>
-                                    <tr>
-                                      <th>Product ID</th>
-                                      <th>Description</th>
-                                      <th>Price</th>
-                                      <th>Quantity</th>
-                                      <th>Total Value</th>
+                            <!--products table-->
+                            <h1>Javazon Products</h1>
+                            <table>
+                                <tr>
+                                    <th>Product ID</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total Value</th>
+                                </tr>
+                                <tr>
+                                    <td id="txtProd1ID"></td>
+                                    <td id="txtProd1Description"></td>
+                                    <td id="txtProd1Price"></td>
+                                    <td id="txtProd1Quantity"></td>
+                                    <td id="txtProd1TotalValue"></td>
+                                </tr>
+                                <tr>
+                                    <td id="txtProd2ID"></td>
+                                    <td id="txtProd2Description"></td>
+                                    <td id="txtProd2Price"></td>
+                                    <td id="txtProd2Quantity"></td>
+                                    <td id="txtProd2TotalValue"></td>
+                                </tr>
+                                <tr>
+                                    <td id="txtProd3ID"></td>
+                                    <td id="txtProd3Description"></td>
+                                    <td id="txtProd3Price"></td>
+                                    <td id="txtProd3Quantity"></td>
+                                    <td id="txtProd3TotalValue"></td>
+                                </tr>
+                                <tr>
+                                    <td id="txtProd4ID"></td>
+                                    <td id="txtProd4Description"></td>
+                                    <td id="txtProd4Price"></td>
+                                    <td id="txtProd4Quantity"></td>
+                                    <td id="txtProd4TotalValue"></td>
+                                </tr>
+                                <tr>
+                                    <td id="txtProd5ID"></td>
+                                    <td id="txtProd5Description"></td>
+                                    <td id="txtProd5Price"></td>
+                                    <td id="txtProd5Quantity"></td>
+                                    <td id="txtProd5TotalValue"></td>
                                     </tr>
-                                    <tr>
-                                      <td id="txtProd1ID"></td>
-                                      <td id="txtProd1Description"></td>
-                                      <td id="txtProd1Price"></td>
-                                      <td id="txtProd1Quantity"></td>
-                                      <td id="txtProd1TotalValue"></td>
-                                    </tr>
-                                    <tr>
-                                      <td id="txtProd2ID"></td>
-                                      <td id="txtProd2Description"></td>
-                                      <td id="txtProd2Price"></td>
-                                      <td id="txtProd2Quantity"></td>
-                                      <td id="txtProd2TotalValue"></td>
-                                    </tr>
-                                    <tr>
-                                      <td id="txtProd3ID"></td>
-                                      <td id="txtProd3Description"></td>
-                                      <td id="txtProd3Price"></td>
-                                      <td id="txtProd3Quantity"></td>
-                                      <td id="txtProd3TotalValue"></td>
-                                    </tr>
-                                    <tr>
-                                      <td id="txtProd4ID"></td>
-                                      <td id="txtProd4Description"></td>
-                                      <td id="txtProd4Price"></td>
-                                      <td id="txtProd4Quantity"></td>
-                                      <td id="txtProd4TotalValue"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="txtProd5ID"></td>
-                                        <td id="txtProd5Description"></td>
-                                        <td id="txtProd5Price"></td>
-                                        <td id="txtProd5Quantity"></td>
-                                        <td id="txtProd5TotalValue"></td>
-                                      </tr>
-                                    </table>
-                                    </div>
-
-                                    <!--Authors table-->
-                            <div class= "card-content" id="services">
-                                        <h1>Javazon Services</h1>
-                                    <table>
-                                        <tr>
-                                          <th>Service ID</th>
-                                          <th>Description</th>
-                                          <th>Hourly Rate</th>
-                                          <th>Minimum Billable Hours</th>
-                                        </tr>
-                                        <tr>
-                                          <td id="txtServ1ID"></td>
-                                          <td id="txtServ1Description"></td>
-                                          <td id="txtServ1Hourly"></td>
-                                          <td id="txtServ1Min"></td>
-                                        </tr>
-                                        <tr>
-                                            <td id="txtServ2ID"></td>
-                                            <td id="txtServ2Description"></td>
-                                            <td id="txtServ2Hourly"></td>
-                                            <td id="txtServ2Min"></td>
-                                        </tr>
-                                        <tr>
-                                            <td id="txtServ3ID"></td>
-                                            <td id="txtServ3Description"></td>
-                                            <td id="txtServ3Hourly"></td>
-                                            <td id="txtServ3Min"></td>
-                                        </tr>
-                                    </table>
-                                        </div>
+                                </table>
                         </div>
 
-                            <div class="card-content" id="employees">
-                        
-                                <!--Books table-->
-                                    <h1>Javazon Employees</h1>
-                                <table>
-                                    <tr>
-                                        <th>Employee ID</th>
-                                        <th>Last name</th>
-                                        <th>First Name</th>
-                                        <th>Salary</th>
-                                    </tr>
-                                    <tr>
-                                        <td id="txtEmp1ID"></td>
-                                        <td id="txtEmp1Last"></td>
-                                        <td id="txtEmp1First"></td>
-                                        <td id="txtEmp1Salary"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="txtEmp2ID"></td>
-                                        <td id="txtEmp2Last"></td>
-                                        <td id="txtEmp2First"></td>
-                                        <td id="txtEmp2Salary"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="txtEmp3ID"></td>
-                                        <td id="txtEmp3Last"></td>
-                                        <td id="txtEmp3First"></td>
-                                        <td id="txtEmp3Salary"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="txtEmp4ID"></td>
-                                        <td id="txtEmp4Last"></td>
-                                        <td id="txtEmp4First"></td>
-                                        <td id="txtEmp4Salary"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="txtEmp5ID"></td>
-                                        <td id="txtEmp5Last"></td>
-                                        <td id="txtEmp5First"></td>
-                                        <td id="txtEmp5Salary"></td>
-                                    </tr>
-                                    </table>
-                                    </div>
+                        <!--services table-->
+                        <div class= "card-content" id="services">
+                            <h1>Javazon Services</h1>
+                            <table>
+                                <tr>
+                                    <th>Service ID</th>
+                                    <th>Description</th>
+                                    <th>Hourly Rate</th>
+                                    <th>Minimum Billable Hours</th>
+                                </tr>
+                                <tr>
+                                    <td id="txtServ1ID"></td>
+                                    <td id="txtServ1Description"></td>
+                                    <td id="txtServ1Hourly"></td>
+                                    <td id="txtServ1Min"></td>
+                                </tr>
+                                <tr>
+                                    <td id="txtServ2ID"></td>
+                                    <td id="txtServ2Description"></td>
+                                    <td id="txtServ2Hourly"></td>
+                                    <td id="txtServ2Min"></td>
+                                </tr>
+                                <tr>
+                                    <td id="txtServ3ID"></td>
+                                    <td id="txtServ3Description"></td>
+                                    <td id="txtServ3Hourly"></td>
+                                    <td id="txtServ3Min"></td>
+                                </tr>
+                            </table>
+                        </div>
 
+                        <!--employees table-->
+                        <div class="card-content" id="employees">
+                            <h1>Javazon Employees</h1>
+                            <table>
+                                <tr>
+                                    <th>Employee ID</th>
+                                    <th>Last name</th>
+                                    <th>First Name</th>
+                                    <th>Salary</th>
+                                </tr>
+                                <tr>
+                                    <td id="txtEmp1ID"></td>
+                                    <td id="txtEmp1Last"></td>
+                                    <td id="txtEmp1First"></td>
+                                    <td id="txtEmp1Salary"></td>
+                                </tr>
+                                <tr>
+                                    <td id="txtEmp2ID"></td>
+                                    <td id="txtEmp2Last"></td>
+                                    <td id="txtEmp2First"></td>
+                                    <td id="txtEmp2Salary"></td>
+                                </tr>
+                                <tr>
+                                    <td id="txtEmp3ID"></td>
+                                    <td id="txtEmp3Last"></td>
+                                    <td id="txtEmp3First"></td>
+                                    <td id="txtEmp3Salary"></td>
+                                </tr>
+                                <tr>
+                                    <td id="txtEmp4ID"></td>
+                                    <td id="txtEmp4Last"></td>
+                                    <td id="txtEmp4First"></td>
+                                    <td id="txtEmp4Salary"></td>
+                                </tr>
+                                <tr>
+                                    <td id="txtEmp5ID"></td>
+                                    <td id="txtEmp5Last"></td>
+                                    <td id="txtEmp5First"></td>
+                                    <td id="txtEmp5Salary"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
        
 
                                     
-                    <script>
-                        const element = document.getElementById("btnDisplayListing"); // is the button to grab the selection info
-                        element.addEventListener("click",  javazonResults);
+<script>
+const element = document.getElementById("btnDisplayListing"); // is the button to grab the selection info
+element.addEventListener("click",  javazonResults);
 
-                        // These are the objects for books that will be assigned to one of the tables
-                        class Product {
-                            constructor(id, description, price, quantity, totalValue){
-                                this.id = id;
-                                this.description = description;
-                                this.price = price;
-                                this.quantity = quantity;
-                                this.totalValue = price * quantity;
-                            }
-                        }
-                        
-                        let product1 = new Product(1227, "Helle Knife - Speider", 79.33, 2);
-                        let product2 = new Product(2235, "Midwest Foraging", 22.46, 16);
-                        let product3 = new Product(2326, "How to Stay Alive in the Woods", 12.29, 12);
-                        let product4 = new Product(1567, "Shappell Jet Sled", 69.99, 6);
-                        let product5 = new Product(2232, "Hunt, Gather, Cook", 14.99, 8);
+// This is the product class
+class Product {
+    constructor(id, description, price, quantity, totalValue){
+        this.id = id;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+        this.totalValue = price * quantity;
+    }
+}
 
-                        class Service {
-                            constructor(id, description, hourlyRate, min){
-                                this.id = id;
-                                this.description = description;
-                                this.hourlyRate = hourlyRate;
-                                this.min = min;
-                            }
-                        }
-                        
-                        let service1 = new Service(1, "Fishing Guide", 22.55, 32);
-                        let service2 = new Service(2, "Hunting Guide", 30.23, 40);
-                        let service3 = new Service(3, "Camp Chef", 20.31, 6);
+//these are the objects with associated with product class
+let product1 = new Product(1227, "Helle Knife - Speider", 79.33, 2);
+let product2 = new Product(2235, "Midwest Foraging", 22.46, 16);
+let product3 = new Product(2326, "How to Stay Alive in the Woods", 12.29, 12);
+let product4 = new Product(1567, "Shappell Jet Sled", 69.99, 6);
+let product5 = new Product(2232, "Hunt, Gather, Cook", 14.99, 8);
 
-                        class Employee {
-                            constructor(id, firstName, lastName,  salary){
-                                this.id = id;
-                                this.firstName = firstName;
-                                this.lastName = lastName;
-                                this.salary = salary;
-                            }
-                        }
+// This is the service class
+class Service {
+    constructor(id, description, hourlyRate, min){
+        this.id = id;
+        this.description = description;
+        this.hourlyRate = hourlyRate;
+        this.min = min;
+    }
+}
 
-                        let employee1 = new Employee(1, "Jedediah", "Smith", 31.22);
-                        let employee2 = new Employee(2, "Jim", "Bridger", 29.15);
-                        let employee3 = new Employee(3, "Hugh", "Glass", 25.98);
-                        let employee4 = new Employee(4, "Kit", "Carson", 38.98);
-                        let employee5 = new Employee(5, "John", "Colter", 27.77);
-                        
-                        //Assigning variables for the tables
-                        let products = document.getElementById("products");
-                        let services = document.getElementById("services");
-                        let employees = document.getElementById("employees")  ;
+//these are the objects with associated with service class
+let service1 = new Service(1, "Fishing Guide", 22.55, 32);
+let service2 = new Service(2, "Hunting Guide", 30.23, 40);
+let service3 = new Service(3, "Camp Chef", 20.31, 6);
 
-                                products.style.display = "none"; //Both of these are required to keep the tables from showing up on page load
-                                services.style.display = "none";
-                                employees.style.display = "none";
+// This is employee class
+class Employee {
+    constructor(id, firstName, lastName,  salary){
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+    }
+}
 
-                        // This function for if else if allows the information to be placed in the correct table fields
-                        function javazonResults() {
-                            let choice = document.getElementById("listing").value; // choice is based on the drop down menu above 
-                            
-                            if (choice == "select") { //once selected it makes the tables disappear if they have already had a selection
-                                products.style.display = "none";
-                                services.style.display = "none";
-                                employees.style.display = "none";
-                                
-                                
-                            }
-                            else if (choice == "products") { // once selected this will show the books table and stop the authors table from showing
-                                products.style.display = "block";
-                                services.style.display = "none";
-                                employees.style.display = "none";
+//these are the objects with associated with employee class
+let employee1 = new Employee(1, "Jedediah", "Smith", 31.22);
+let employee2 = new Employee(2, "Jim", "Bridger", 29.15);
+let employee3 = new Employee(3, "Hugh", "Glass", 25.98);
+let employee4 = new Employee(4, "Kit", "Carson", 38.98);
+let employee5 = new Employee(5, "John", "Colter", 27.77);
 
+//Assigning variables for the tables
+let products = document.getElementById("products");
+let services = document.getElementById("services");
+let employees = document.getElementById("employees")  ;
 
-                                    //this information is from the const book1 and displays information to the HTML table
-                                    document.getElementById('txtProd1ID').innerHTML = product1["id"];
-                                    document.getElementById('txtProd1Description').innerHTML = product1["description"];
-                                    document.getElementById('txtProd1Price').innerHTML = product1["price"];
-                                    document.getElementById('txtProd1Quantity').innerHTML = product1["quantity"];
-                                    document.getElementById('txtProd1TotalValue').innerHTML = product1["totalValue"].toFixed(2);
-                                    
+        products.style.display = "none"; //these are required to keep the tables from showing up on page load
+        services.style.display = "none";
+        employees.style.display = "none";
 
-                                    //this information is from the const book2 and displays information to the HTML table
-                                    document.getElementById('txtProd2ID').innerHTML = product2["id"];
-                                    document.getElementById('txtProd2Description').innerHTML = product2["description"];
-                                    document.getElementById('txtProd2Price').innerHTML = product2["price"];
-                                    document.getElementById('txtProd2Quantity').innerHTML = product2["quantity"];
-                                    document.getElementById('txtProd2TotalValue').innerHTML = product2["totalValue"].toFixed(2);
+// This function for the switch statement and allows the information to be placed in the correct table fields
+function javazonResults() {
+    let choice = document.getElementById("listing").value; // choice is based on the drop down menu above 
+    
+    //switch statement based on whats selected, keeps other tables that are not selected from loading in as well
+    switch(choice) {
+        case "select":
+            products.style.display = "none";
+            services.style.display = "none";
+            employees.style.display = "none";
 
-                                    //this information is from the const book3 and displays information to the HTML table
-                                    document.getElementById('txtProd3ID').innerHTML = product3["id"];
-                                    document.getElementById('txtProd3Description').innerHTML = product3["description"];
-                                    document.getElementById('txtProd3Price').innerHTML = product3["price"];
-                                    document.getElementById('txtProd3Quantity').innerHTML = product3["quantity"];
-                                    document.getElementById('txtProd3TotalValue').innerHTML = product3["totalValue"].toFixed(2);
+            break;
 
+        case "products":
+            products.style.display = "block";
+            services.style.display = "none";
+            employees.style.display = "none";
 
-                                    document.getElementById('txtProd4ID').innerHTML = product4["id"];
-                                    document.getElementById('txtProd4Description').innerHTML = product4["description"];
-                                    document.getElementById('txtProd4Price').innerHTML = product4["price"];
-                                    document.getElementById('txtProd4Quantity').innerHTML = product4["quantity"];
-                                    document.getElementById('txtProd4TotalValue').innerHTML = product4["totalValue"].toFixed(2);
+            //this information is from the products class and displays information to the HTML table
+            //product 1
+            document.getElementById('txtProd1ID').innerHTML = product1["id"];
+            document.getElementById('txtProd1Description').innerHTML = product1["description"];
+            document.getElementById('txtProd1Price').innerHTML = product1["price"];
+            document.getElementById('txtProd1Quantity').innerHTML = product1["quantity"];
+            document.getElementById('txtProd1TotalValue').innerHTML = product1["totalValue"].toFixed(2);
+            
+            //product 2
+            document.getElementById('txtProd2ID').innerHTML = product2["id"];
+            document.getElementById('txtProd2Description').innerHTML = product2["description"];
+            document.getElementById('txtProd2Price').innerHTML = product2["price"];
+            document.getElementById('txtProd2Quantity').innerHTML = product2["quantity"];
+            document.getElementById('txtProd2TotalValue').innerHTML = product2["totalValue"].toFixed(2);
 
+            //product 3
+            document.getElementById('txtProd3ID').innerHTML = product3["id"];
+            document.getElementById('txtProd3Description').innerHTML = product3["description"];
+            document.getElementById('txtProd3Price').innerHTML = product3["price"];
+            document.getElementById('txtProd3Quantity').innerHTML = product3["quantity"];
+            document.getElementById('txtProd3TotalValue').innerHTML = product3["totalValue"].toFixed(2);
 
-                                    document.getElementById('txtProd5ID').innerHTML = product5["id"];
-                                    document.getElementById('txtProd5Description').innerHTML = product5["description"];
-                                    document.getElementById('txtProd5Price').innerHTML = product5["price"];
-                                    document.getElementById('txtProd5Quantity').innerHTML = product5["quantity"];
-                                    document.getElementById('txtProd5TotalValue').innerHTML = product5["totalValue"].toFixed(2);
+            //product 4
+            document.getElementById('txtProd4ID').innerHTML = product4["id"];
+            document.getElementById('txtProd4Description').innerHTML = product4["description"];
+            document.getElementById('txtProd4Price').innerHTML = product4["price"];
+            document.getElementById('txtProd4Quantity').innerHTML = product4["quantity"];
+            document.getElementById('txtProd4TotalValue').innerHTML = product4["totalValue"].toFixed(2);
 
+            //product 5
+            document.getElementById('txtProd5ID').innerHTML = product5["id"];
+            document.getElementById('txtProd5Description').innerHTML = product5["description"];
+            document.getElementById('txtProd5Price').innerHTML = product5["price"];
+            document.getElementById('txtProd5Quantity').innerHTML = product5["quantity"];
+            document.getElementById('txtProd5TotalValue').innerHTML = product5["totalValue"].toFixed(2);
 
-                                    
-                            }
+            break;
 
-                            else if (choice == "services") { // once selected this will show the authors table and stop the books table from showing 
-                                products.style.display = "none";
-                                services.style.display = "block";
-                                employees.style.display = "none";
-                                
+        case "services":
+            products.style.display = "none";
+            services.style.display = "block";
+            employees.style.display = "none";  
 
-  
-                                //this information is from the const author1 and displays information to the HTML table
-                                    document.getElementById('txtServ1ID').innerHTML = service1["id"];
-                                    document.getElementById('txtServ1Description').innerHTML = service1["description"];
-                                    document.getElementById('txtServ1Hourly').innerHTML = service1["hourlyRate"];
-                                    document.getElementById('txtServ1Min').innerHTML = service1["min"];
+            //this information is from the service class and displays information to the HTML table
+            //service 1
+            document.getElementById('txtServ1ID').innerHTML = service1["id"];
+            document.getElementById('txtServ1Description').innerHTML = service1["description"];
+            document.getElementById('txtServ1Hourly').innerHTML = service1["hourlyRate"];
+            document.getElementById('txtServ1Min').innerHTML = service1["min"];
 
+            //service 2
+            document.getElementById('txtServ2ID').innerHTML = service2["id"];
+            document.getElementById('txtServ2Description').innerHTML = service2["description"];
+            document.getElementById('txtServ2Hourly').innerHTML = service2["hourlyRate"];
+            document.getElementById('txtServ2Min').innerHTML = service2["min"];
 
-                                    //this information is from the const author2 and displays information to the HTML table
-                                    document.getElementById('txtServ2ID').innerHTML = service2["id"];
-                                    document.getElementById('txtServ2Description').innerHTML = service2["description"];
-                                    document.getElementById('txtServ2Hourly').innerHTML = service2["hourlyRate"];
-                                    document.getElementById('txtServ2Min').innerHTML = service2["min"];
+            //service 3
+            document.getElementById('txtServ3ID').innerHTML = service3["id"];
+            document.getElementById('txtServ3Description').innerHTML = service3["description"];
+            document.getElementById('txtServ3Hourly').innerHTML = service3["hourlyRate"];
+            document.getElementById('txtServ3Min').innerHTML = service3["min"];
 
+            break;
 
-                                    //this information is from the const author3 and displays information to the HTML table
-                                    document.getElementById('txtServ3ID').innerHTML = service3["id"];
-                                    document.getElementById('txtServ3Description').innerHTML = service3["description"];
-                                    document.getElementById('txtServ3Hourly').innerHTML = service3["hourlyRate"];
-                                    document.getElementById('txtServ3Min').innerHTML = service3["min"];
-                            }
-                            
-                            else if (choice == "employees") { // once selected this will show the authors table and stop the books table from showing 
-                                products.style.display = "none";
-                                services.style.display = "none";
-                                employees.style.display = "block";
-                                
+        case "employees":
+            products.style.display = "none";
+            services.style.display = "none";
+            employees.style.display = "block";
 
-  
-                                //this information is from the const author1 and displays information to the HTML table
-                                    document.getElementById('txtEmp1ID').innerHTML = employee1["id"];
-                                    document.getElementById('txtEmp1Last').innerHTML = employee1["lastName"];
-                                    document.getElementById('txtEmp1First').innerHTML = employee1["firstName"];
-                                    document.getElementById('txtEmp1Salary').innerHTML = employee1["salary"];
+            //this information is from the employee class and displays information to the HTML table
+            //employee 1
+            document.getElementById('txtEmp1ID').innerHTML = employee1["id"];
+            document.getElementById('txtEmp1Last').innerHTML = employee1["lastName"];
+            document.getElementById('txtEmp1First').innerHTML = employee1["firstName"];
+            document.getElementById('txtEmp1Salary').innerHTML = employee1["salary"];
 
+            //employee 2
+            document.getElementById('txtEmp2ID').innerHTML = employee2["id"];
+            document.getElementById('txtEmp2Last').innerHTML = employee2["lastName"];
+            document.getElementById('txtEmp2First').innerHTML = employee2["firstName"];
+            document.getElementById('txtEmp2Salary').innerHTML = employee2["salary"];
 
-                                    //this information is from the const author2 and displays information to the HTML table
-                                    document.getElementById('txtEmp2ID').innerHTML = employee2["id"];
-                                    document.getElementById('txtEmp2Last').innerHTML = employee2["lastName"];
-                                    document.getElementById('txtEmp2First').innerHTML = employee2["firstName"];
-                                    document.getElementById('txtEmp2Salary').innerHTML = employee2["salary"];
+            //employee 3
+            document.getElementById('txtEmp3ID').innerHTML = employee3["id"];
+            document.getElementById('txtEmp3Last').innerHTML = employee3["lastName"];
+            document.getElementById('txtEmp3First').innerHTML = employee3["firstName"];
+            document.getElementById('txtEmp3Salary').innerHTML = employee3["salary"];
 
+            //employee 4
+            document.getElementById('txtEmp4ID').innerHTML = employee4["id"];
+            document.getElementById('txtEmp4Last').innerHTML = employee4["lastName"];
+            document.getElementById('txtEmp4First').innerHTML = employee4["firstName"];
+            document.getElementById('txtEmp4Salary').innerHTML = employee4["salary"];
 
-                                    //this information is from the const author3 and displays information to the HTML table
-                                    document.getElementById('txtEmp3ID').innerHTML = employee3["id"];
-                                    document.getElementById('txtEmp3Last').innerHTML = employee3["lastName"];
-                                    document.getElementById('txtEmp3First').innerHTML = employee3["firstName"];
-                                    document.getElementById('txtEmp3Salary').innerHTML = employee3["salary"];
+            //employee 5
+            document.getElementById('txtEmp5ID').innerHTML = employee5["id"];
+            document.getElementById('txtEmp5Last').innerHTML = employee5["lastName"];
+            document.getElementById('txtEmp5First').innerHTML = employee5["firstName"];
+            document.getElementById('txtEmp5Salary').innerHTML = employee5["salary"];
 
+            break;
 
-                                    document.getElementById('txtEmp4ID').innerHTML = employee4["id"];
-                                    document.getElementById('txtEmp4Last').innerHTML = employee4["lastName"];
-                                    document.getElementById('txtEmp4First').innerHTML = employee4["firstName"];
-                                    document.getElementById('txtEmp4Salary').innerHTML = employee4["salary"];
+    }
+}
 
-
-                                    document.getElementById('txtEmp5ID').innerHTML = employee5["id"];
-                                    document.getElementById('txtEmp5Last').innerHTML = employee5["lastName"];
-                                    document.getElementById('txtEmp5First').innerHTML = employee5["firstName"];
-                                    document.getElementById('txtEmp5Salary').innerHTML = employee5["salary"];
-                            }
-
-                            else {
-
-                                
-                            }
-                        }
-
-                        </script>
+</script>
                     
 
                 </div>
-            </div>
         
     </body>

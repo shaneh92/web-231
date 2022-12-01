@@ -9,8 +9,8 @@
     ; Work Cited: 
         Web 231 HTML, CSS, and JavaScript Requirements
         Web 231 Assign_7
-
-
+        W3 Schools https://www.w3schools.com/js/js_classes.asp javascript classes
+        W3 Schools https://www.w3schools.com/js/js_switch.asp Switch Statements
     ========================================================================================================================
   */ 
 
@@ -29,10 +29,10 @@ h1 {
     color: #4f3674;
     font-weight: 400;
     font-size: 2em;
-    /*the table title*/
+    /*the table title, stays in the local css since it may affect other h1*/
   }
 
-/*All this information below is for the table*/
+/*All this information below is for the table moved to global.css for D.R.Y.
 table  {
     border-collapse: collapse;
     width: 100%;
@@ -57,8 +57,9 @@ table tr:hover {
     background-color: #d6a800;
     color: #4f3674;
     cursor: pointer;
-    /*for the gold hover with your pointer */
-}
+    for the gold hover with your pointer 
+} */
+
   /* the classes and ID's below are found on ../global.css added not only to reference what would go here if we didn't have multiple assignments using the same card formats part of D.R.Y.
   #form-results {
     width: 600px;

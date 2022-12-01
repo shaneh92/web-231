@@ -36,7 +36,7 @@ h1 {
     /*the table title*/
   }
 
-/*All this information below is for the table*/
+/*All this information below is for the table moved to global.css for D.R.Y.
 table  {
     border-collapse: collapse;
     width: 100%;
@@ -61,8 +61,8 @@ table tr:hover {
     background-color: #d6a800;
     color: #4f3674;
     cursor: pointer;
-    /*for the gold hover with your pointer */
-}
+    for the gold hover with your pointer 
+} */
   /* the classes and ID's below are found on ../global.css added not only to reference what would go here if we didn't have multiple assignments using the same card formats part of D.R.Y.
   #form-results {
     width: 600px;
