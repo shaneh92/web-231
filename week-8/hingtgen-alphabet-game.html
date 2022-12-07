@@ -40,8 +40,8 @@
                         <div class="card-content">
                             <div class="form">
                                 <div class="form-field">
-                                    <!--This drop down menu provides the values for the script below-->
-                                    <label for="listing">Alphabet Letter Position</label> <!--form created with button-->
+                                    <!--form created with button-->
+                                    <label for="listing">Alphabet Letter Position</label> 
 
                                         <input type="text" class="input" id="txtPosition" name="txtPosition">
                                     </select>
@@ -58,7 +58,7 @@
                     <a class='return-home' href="../index.html">Return</a>
                 </div>
 
-                <!--This is the results card, it will show the results from the script below based on the selection above-->
+                <!--This is the results card, it will show the results from the script below based on the input above-->
                 <div id="form-results">
                     <div class="card">
                         <div class="card-title">Letters in the Alphabet</div>
@@ -79,26 +79,27 @@
 
                                     
 <script>
-const element = document.getElementById("btnFindLetter"); // is the button to grab the selection info
+const element = document.getElementById("btnFindLetter"); // is the button to grab the input
 element.addEventListener("click", alphabetGame);
 const alphabet = [" A", " B", " C", " D", " E", " F", " G", " H", " I", " J", " K", " L", " M", " N", " O", " P", " Q", " R", " S", " T", " U", " V", " W", " X", " Y", " Z"];
 let alphabetOutput = "";
+
 //for/in loop
-for (let pos in alphabet) {
-    let letter = pos;
-    alphabetOutput = alphabet[letter] + " ";
+for (let x in alphabet) {
+    alphabetOutput += alphabet[x] + ", ";
 }
 
-document.getElementById('txtAlphabet').innerHTML = alphabet.slice(1);
+document.getElementById('txtAlphabet').innerHTML = alphabet;
 
+//function with if statement to show results
 function alphabetGame() {
     let pos = document.getElementById("txtPosition").value; 
-    let letter = pos - 1;
-    if (letter == 'undefined') {
+    let letter = alphabet[pos - 1]; //so " A" shows up as value 1, and 0 becomes undefined
+    if (letter === undefined) {
         alphabetOutput = "There are not " + pos + " letters in the alphabet";
-    } else {
-  
-        alphabetOutput = alphabet[letter] + " is at position " + pos + " in the alphabet";
+    } 
+    else {
+        alphabetOutput = letter + " is at position " + pos + " in the alphabet";
     }
 
     document.getElementById('result').innerHTML = alphabetOutput;
