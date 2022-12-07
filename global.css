@@ -120,7 +120,7 @@
     /* This is where the card will display its results that were inputted in #form-temp */
   }
   
-  #temp, #result {
+  #temp, #result, #txtAlphabet {
     font-size: 28px;
     /* Font sized for the results in the results card */
   }
