@@ -1,16 +1,18 @@
 /*
     ========================================================================================================================
-    ; Title: Assignment 7.2 Javazon
+    ; Title: Assignment 8.2 Alphabet Game
     ; Author: Professor Krasso
     ; Modified by: Shane Hingtgen
     ; Bellevue University
-    ; Date: 11/28/2022
-    ; Description: This assignment is to learn how to create classes in JavaScript and apply them into a table in html
+    ; Date: 12/05/2022
+    ; Description: This assignment we learn how to create a for/in loop and use different conditions for if else statements
     ; Work Cited: 
         Web 231 HTML, CSS, and JavaScript Requirements
-        Web 231 Assign_7
-        W3 Schools https://www.w3schools.com/js/js_classes.asp javascript classes
-        W3 Schools https://www.w3schools.com/js/js_switch.asp Switch Statements
+        Web 231 Assign_8
+        W3 Schools https://www.w3schools.com/js/js_arrays.asp
+        W3 Schools https://www.w3schools.com/jsref/jsref_if.asp
+        W3 Schools https://www.w3schools.com/jsref/jsref_forin.asp
+        
     ========================================================================================================================
   */ 
 
@@ -60,7 +62,7 @@ table tr:hover {
     text-align: center;
   }
   
-  #temp, #result {
+  #temp, #result, #txtAlphabet {
     font-size: 28px;
   }
   

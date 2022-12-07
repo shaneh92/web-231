@@ -5,10 +5,14 @@
     ; Modified by: Shane Hingtgen
     ; Bellevue University
     ; Date: 12/05/2022
-    ; Description: This assignment is to learn how to create classes in JavaScript and apply them into a table in html with a switch statement
+    ; Description: This assignment we learn how to create a for/in loop and use different conditions for if else statements
     ; Work Cited: 
         Web 231 HTML, CSS, and JavaScript Requirements
-
+        Web 231 Assign_8
+        W3 Schools https://www.w3schools.com/js/js_arrays.asp
+        W3 Schools https://www.w3schools.com/jsref/jsref_if.asp
+        W3 Schools https://www.w3schools.com/jsref/jsref_forin.asp
+        
     ========================================================================================================================
 -->
 <!DOCTYPE html>
@@ -24,7 +28,7 @@
                 rel="stylesheet" />  
         <!--css document and the chosen fonts for the class-->  
     <body>
-         <!--form created with button-->
+         
         <div id="container">
            
             <h1 class="app-header">Welcome to the Alphabet Game!</h1>
@@ -37,7 +41,7 @@
                             <div class="form">
                                 <div class="form-field">
                                     <!--This drop down menu provides the values for the script below-->
-                                    <label for="listing">Alphabet Letter Position</label> 
+                                    <label for="listing">Alphabet Letter Position</label> <!--form created with button-->
 
                                         <input type="text" class="input" id="txtPosition" name="txtPosition">
                                     </select>
@@ -77,8 +81,9 @@
 <script>
 const element = document.getElementById("btnFindLetter"); // is the button to grab the selection info
 element.addEventListener("click", alphabetGame);
-const alphabet = [undefined, " A", " B", " C", " D", " E", " F", " G", " H", " I", " J", " K", " L", " M", " N", " O", " P", " Q", " R", " S", " T", " U", " V", " W", " X", " Y", " Z"];
+const alphabet = [" A", " B", " C", " D", " E", " F", " G", " H", " I", " J", " K", " L", " M", " N", " O", " P", " Q", " R", " S", " T", " U", " V", " W", " X", " Y", " Z"];
 let alphabetOutput = "";
+//for/in loop
 for (let pos in alphabet) {
     let letter = pos;
     alphabetOutput = alphabet[letter] + " ";
@@ -88,13 +93,12 @@ document.getElementById('txtAlphabet').innerHTML = alphabet.slice(1);
 
 function alphabetGame() {
     let pos = document.getElementById("txtPosition").value; 
-
-    if (pos >= 1 && pos <= 26) {
-        let letter = pos;
-        alphabetOutput = alphabet[letter] + " is at position " + pos + " in the alphabet";
-    } 
-    else {
+    let letter = pos - 1;
+    if (letter == 'undefined') {
         alphabetOutput = "There are not " + pos + " letters in the alphabet";
+    } else {
+  
+        alphabetOutput = alphabet[letter] + " is at position " + pos + " in the alphabet";
     }
 
     document.getElementById('result').innerHTML = alphabetOutput;
