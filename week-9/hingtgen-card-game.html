@@ -65,7 +65,7 @@
                 <div id="form-results">
                     <div class="card">
                         <div class="card-title">Results</div>
-                        <div class="card-content" id="result">
+                        <div class="player-card-container" id="result">
          
                         </div>
                     </div>
@@ -73,8 +73,8 @@
 
                                     
 <script>
-const element = document.getElementById("btnDealCards"); // is the button to grab the input
-element.addEventListener("click", getDeckOfCards);
+//const element = document.getElementById("btnDealCards"); // is the button to grab the input
+//element.addEventListener("click", getDeckOfCards);
 //Card class with face and suit constructors
 class Card {
     constructor(face, suit){
@@ -85,28 +85,29 @@ class Card {
 } 
 
 class Dealer {
-    constructor(){
+    CARD_COUNT = 52;
+    cards = [];
+    faces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+    suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
 
+    constructor(){  
+        getDeckOfCards();
     }
 }
 
-const CARD_COUNT = 52;
-let cards = [];
-const faces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-const suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
 
-//function with if statement to show results
+
 function getDeckOfCards() {
-  for (let i = 0; i < CARD_COUNT; i++) { 
+  for (let i = 0; i < Dealer.CARD_COUNT; i++) { 
    
-    cards[i] = new Card(faces[i % 13], suits[Math.floor(i / 13)]);
+    this.cards[i] = new Card(this.faces[i % 13], this.suits[Math.floor(i / 13)]);
   }
-  shuffle(); //testing
+  //shuffle(); //testing
 }
 
 function shuffle() {
-    for (let i = 0; i < CARD_COUNT; i++) {
-        let secondCard = Math.floor(Math.random() * this.CARD_COUNT);
+    for (let i = 0; i < Dealer.CARD_COUNT; i++) {
+        let secondCard = Math.floor(Math.random() * Dealer.CARD_COUNT);
         firstCard = cards[i];
         let tempCard = firstCard;
         i = secondCard;
@@ -117,32 +118,37 @@ function shuffle() {
 }
 
 function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
-
+    return `<div class-"card player-card"><div class="card=title" style="text-align: left; font-size: 20px; padding-left: 10px; color: ${faceColor}">${card.face}</div><div class="card-content" style="font-size: 28px; padding-bottom: 25px;"><span class="${suitIcon}" style="color: ${suitColor}"></span></div></div>`
 }
 
-function buildPlayerCard() {
+document.getElementById("btnDealCards").onclick = function() {
+
+    let dealer = new Dealer();
+    dealer.shuffle();
     let cardOutputWithIcon = "";
-
-    for () {
-
-        switch() {
+    for (const card of dealer.cards) {
+        switch(card.suit) {
             case "Hearts":
                 cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-heart", "red", "red");
                 break;
             
             case "Diamonds":
-                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-diamond", "red", "red");
+               cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-diamond", "red", "red");
                 break;
 
             case "Clubs":
                 cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-club", "black", "black");
-                break;
+               break;
 
             case "Hearts":
                 cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-card-spade", "black", "black");
                 break;
         }
+
+
 }
+
+document.getElementById('player-card-container').innerHTML = cardOutputWithIcon;
 }
 </script>
                     
