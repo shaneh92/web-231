@@ -1,0 +1,154 @@
+<!--
+    ========================================================================================================================
+    ; Title: Assignment 9.2 Card Game
+    ; Author: Professor Krasso
+    ; Modified by: Shane Hingtgen
+    ; Bellevue University
+    ; Date: 12/05/2022
+    ; Description: This assignment we learn how to create a for/in loop and use different conditions for if else statements
+    ; Work Cited: 
+        Web 231 HTML, CSS, and JavaScript Requirements
+        Web 231 Assign_8
+        W3 Schools https://www.w3schools.com/js/js_arrays.asp
+        W3 Schools https://www.w3schools.com/jsref/jsref_if.asp
+        W3 Schools https://www.w3schools.com/jsref/jsref_forin.asp
+        
+    ========================================================================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web 231 - Enterprise JavaSCript I</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="hingtgen-card-game.css" type="text/css"
+                rel="stylesheet" />
+        <link href="../global.css" type="text/css"
+                rel="stylesheet" /> 
+        <link href="" type="" rel=""/>
+        <!--css document and the chosen fonts for the class-->  
+    <body>
+         
+        <div id="container">
+           
+            <h1 class="app-header">Welcome to the Card Game!</h1>
+
+                <div id="form-temp">
+                    <div class="card">
+                        <div class="card-title">Card Dealer</div>
+                        <br>
+                        <div class="card-content">
+                            <div class="form">               
+                                    <div class="form-field">
+                                        <button class="btn btn-primary full-width" id="btnDealCards">Deal Cards</button>
+                                </div> 
+           
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <a class='return-home' href="../index.html">Return</a>
+                </div>
+
+                <!--This is the results card, it will show the results from the script below based on the input above-->
+                <div id="form-alphabet">
+                    <div class="card">
+                        <div class="card-title">Shuffled Cards</div>
+                        <div class="card-content" id="txtAlphabet">                  
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="form-results">
+                    <div class="card">
+                        <div class="card-title">Results</div>
+                        <div class="card-content" id="result">
+         
+                        </div>
+                    </div>
+                </div>
+
+                                    
+<script>
+const element = document.getElementById("btnDealCards"); // is the button to grab the input
+element.addEventListener("click", getDeckOfCards);
+//Card class with face and suit constructors
+class Card {
+    constructor(face, suit){
+    this.face = face;
+    this.suit = suit;
+    
+    }
+} 
+
+class Dealer {
+    constructor(){
+
+    }
+}
+
+const CARD_COUNT = 52;
+let cards = [];
+const faces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+const suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
+
+//function with if statement to show results
+function getDeckOfCards() {
+  for (let i = 0; i < CARD_COUNT; i++) { 
+   
+    cards[i] = new Card(faces[i % 13], suits[Math.floor(i / 13)]);
+  }
+  shuffle(); //testing
+}
+
+function shuffle() {
+    for (let i = 0; i < CARD_COUNT; i++) {
+        let secondCard = Math.floor(Math.random() * this.CARD_COUNT);
+        firstCard = cards[i];
+        let tempCard = firstCard;
+        i = secondCard;
+        secondCard = tempCard;
+        console.log(firstCard);
+        console.log(secondCard);
+    }
+}
+
+function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
+
+}
+
+function buildPlayerCard() {
+    let cardOutputWithIcon = "";
+
+    for () {
+
+        switch() {
+            case "Hearts":
+                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-heart", "red", "red");
+                break;
+            
+            case "Diamonds":
+                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-diamond", "red", "red");
+                break;
+
+            case "Clubs":
+                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-club", "black", "black");
+                break;
+
+            case "Hearts":
+                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-card-spade", "black", "black");
+                break;
+        }
+}
+}
+</script>
+                    
+
+                </div>
+        
+    </body>
+
+    

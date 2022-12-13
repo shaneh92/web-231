@@ -1,0 +1,86 @@
+/*
+    ========================================================================================================================
+    ; Title: Assignment 8.2 Alphabet Game
+    ; Author: Professor Krasso
+    ; Modified by: Shane Hingtgen
+    ; Bellevue University
+    ; Date: 12/05/2022
+    ; Description: This assignment we learn how to create a for/in loop and use different conditions for if else statements
+    ; Work Cited: 
+        Web 231 HTML, CSS, and JavaScript Requirements
+        Web 231 Assign_8
+        W3 Schools https://www.w3schools.com/js/js_arrays.asp
+        W3 Schools https://www.w3schools.com/jsref/jsref_if.asp
+        W3 Schools https://www.w3schools.com/jsref/jsref_forin.asp
+        
+    ========================================================================================================================
+  */ 
+
+
+  
+  .return-home {
+    float: left;
+    /* Had to do this in order to get the Return link to be in line of the cards left edge*/
+  }
+.card {
+  margin-left: 10px;
+}
+
+.player-card {
+  text-align: center;
+  
+}
+
+/*All this information below is for the table moved to global.css for D.R.Y.
+table  {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+table  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #4f3674;
+    color: white;
+
+}
+
+table  th, table  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table tr:hover {
+    background-color: #d6a800;
+    color: #4f3674;
+    cursor: pointer;
+    for the gold hover with your pointer 
+} */
+
+  /* the classes and ID's below are found on ../global.css added not only to reference what would go here if we didn't have multiple assignments using the same card formats part of D.R.Y.
+  #form-results {
+    width: 600px;
+    margin: 3% auto 0;
+    text-align: center;
+  }
+  
+  #temp, #result, #txtAlphabet {
+    font-size: 28px;
+  }
+  
+  .form {
+    display: inline-grid;
+    grid-template-columns: auto;
+    padding: 10px;
+    
+  
+  }
+  
+  
+  #form-temp {
+    width: 600px;
+    margin: 3% auto 0;
+  }
+  */ 
