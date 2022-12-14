@@ -26,14 +26,12 @@
                 rel="stylesheet" />
         <link href="../global.css" type="text/css"
                 rel="stylesheet" /> 
-        <link href="" type="" rel=""/>
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.4.55/css/materialdesignicons.css" rel="stylesheet"/>
         <!--css document and the chosen fonts for the class-->  
     <body>
          
         <div id="container">
-           
             <h1 class="app-header">Welcome to the Card Game!</h1>
-
                 <div id="form-temp">
                     <div class="card">
                         <div class="card-title">Card Dealer</div>
@@ -56,26 +54,15 @@
                 <div id="form-alphabet">
                     <div class="card">
                         <div class="card-title">Shuffled Cards</div>
-                        <div class="card-content" id="txtAlphabet">                  
+                        <div class="card-content" id="player-card-container">                  
 
                         </div>
                     </div>
                 </div>
 
-                <div id="form-results">
-                    <div class="card">
-                        <div class="card-title">Results</div>
-                        <div class="player-card-container" id="result">
-         
-                        </div>
-                    </div>
-                </div>
-
-                                    
+                           
 <script>
-//const element = document.getElementById("btnDealCards"); // is the button to grab the input
-//element.addEventListener("click", getDeckOfCards);
-//Card class with face and suit constructors
+
 class Card {
     constructor(face, suit){
     this.face = face;
@@ -90,8 +77,24 @@ class Dealer {
     faces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
     suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
 
+    getDeckOfCards() {
+        for (let i = 0; i < this.CARD_COUNT; i++) { 
+   
+            this.cards[i] = new Card(this.faces[i % 13], this.suits[Math.floor(i / 13)]);
+        } 
+    } 
+
+    shuffle() {
+        for (let i = 0; i < this.CARD_COUNT; i++) {
+            let secondCard = Math.floor(Math.random() * this.CARD_COUNT);
+            let tempCard = this.cards[i];
+            this.cards[i] = this.cards[secondCard];
+            this.cards[secondCard] = tempCard;
+        }
+    }
+
     constructor(){  
-        getDeckOfCards();
+        this.getDeckOfCards();
     }
 }
 
@@ -102,53 +105,45 @@ function getDeckOfCards() {
    
     this.cards[i] = new Card(this.faces[i % 13], this.suits[Math.floor(i / 13)]);
   }
-  //shuffle(); //testing
 }
 
-function shuffle() {
-    for (let i = 0; i < Dealer.CARD_COUNT; i++) {
-        let secondCard = Math.floor(Math.random() * Dealer.CARD_COUNT);
-        firstCard = cards[i];
-        let tempCard = firstCard;
-        i = secondCard;
-        secondCard = tempCard;
-        console.log(firstCard);
-        console.log(secondCard);
-    }
-}
+
 
 function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
-    return `<div class-"card player-card"><div class="card=title" style="text-align: left; font-size: 20px; padding-left: 10px; color: ${faceColor}">${card.face}</div><div class="card-content" style="font-size: 28px; padding-bottom: 25px;"><span class="${suitIcon}" style="color: ${suitColor}"></span></div></div>`
+    return `<div class="card player-card"><div class="card-title" style="text-align: left; font-size: 20px; padding-left: 10px; color: ${faceColor}">${card.face}</div><div class="card-content" style="font-size: 28px; padding-bottom: 25px;"><span class="${suitIcon}" style="color: ${suitColor}"></span></div></div>`
 }
 
 document.getElementById("btnDealCards").onclick = function() {
-
     let dealer = new Dealer();
     dealer.shuffle();
+    let count = 0;
     let cardOutputWithIcon = "";
     for (const card of dealer.cards) {
+
         switch(card.suit) {
+            
             case "Hearts":
                 cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-heart", "red", "red");
                 break;
             
             case "Diamonds":
-               cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-diamond", "red", "red");
+                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-diamond", "red", "red");
                 break;
 
             case "Clubs":
                 cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-club", "black", "black");
-               break;
+                break;
 
             case "Hearts":
                 cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-card-spade", "black", "black");
-                break;
+                break;      
         }
-
+        console.log(cardOutputWithIcon);
 
 }
 
 document.getElementById('player-card-container').innerHTML = cardOutputWithIcon;
+
 }
 </script>
                     
